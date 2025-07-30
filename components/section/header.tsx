@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import logo from "@/public/favicon.png";
+import logo1 from "@/public/assets/udang.png";
+import logo2 from "@/public/assets/Universitas.png";
 import ModeToggle from "../ui/mode-toggle";
 
 interface NavItem {
@@ -91,11 +92,27 @@ export default function Header() {
         boxShadow: isScrolled ? "0 8px 32px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto bg-[#0451a1] px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <div className="flex items-center space-x-2">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src={logo} alt="logo" width={200} height={200} />
+            <Link
+              href="/"
+              className="m-0 p-0 flex items-center justify-center w-fit"
+            >
+              <Image
+                src={logo1}
+                alt="logos"
+                className="m-0 p-0 -mx-8"
+                width={80}
+                height={80}
+              />
+              <Image
+                src={logo2}
+                alt="logos"
+                width={90}
+                height={90}
+                className="m-0 p-0 -mb-3"
+              />
             </Link>
           </div>
 
@@ -111,7 +128,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-foreground flex items-center space-x-1 font-medium transition-colors duration-200 hover:text-blue-700"
+                  className="text-foreground flex items-center space-x-1 font-medium transition-colors duration-200 "
                 >
                   <span>{item.name}</span>
                   {item.hasDropdown && (

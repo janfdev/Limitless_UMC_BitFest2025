@@ -119,4 +119,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  .font-bricolage {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+  .fade-bottom {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 50%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
 }
