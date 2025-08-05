@@ -126,4 +126,7 @@
     mask-image: linear-gradient(to bottom, black 80%, transparent 50%);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   }
+  .yellow {
+    color: #ffc300;
+  }
 }

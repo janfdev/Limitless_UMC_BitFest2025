@@ -8,7 +8,6 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import logo1 from "@/public/assets/udang.png";
 import logo2 from "@/public/assets/Universitas.png";
-import ModeToggle from "../ui/mode-toggle";
 
 interface NavItem {
   name: string;
@@ -130,9 +129,9 @@ export default function Header() {
                   href={item.href}
                   className="text-foreground flex items-center space-x-1 font-medium transition-colors duration-200 "
                 >
-                  <span>{item.name}</span>
+                  <span className="text-white">{item.name}</span>
                   {item.hasDropdown && (
-                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+                    <ChevronDown className="text-white h-4 w-4 transition-transform duration-200" />
                   )}
                 </Link>
 
@@ -170,10 +169,6 @@ export default function Header() {
               </div>
             ))}
           </nav>
-
-          <div className="hidden items-center space-x-4 lg:flex">
-            <ModeToggle />
-          </div>
 
           <motion.button
             className="hover:bg-muted rounded-lg p-2 transition-colors duration-200 lg:hidden"

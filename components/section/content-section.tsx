@@ -1,4 +1,4 @@
-import { Camera, GraduationCap, Megaphone } from "lucide-react";
+import { ArrowRightLeft, Camera, GraduationCap, Megaphone } from "lucide-react";
 import React from "react";
 
 const ContentSection = () => {
@@ -7,7 +7,7 @@ const ContentSection = () => {
       className="w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/assets/kampus-ucic.webp')" }}
     >
-      <div className="w-full items-center h-[400px] bg-[#0451a1]/30 py-12 px-4">
+      <div className="w-full items-center md:h-[400px] h-full bg-[#0451a1]/30 py-12 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 items-start lg:gap-5 gap-5 lg:px-10 px-7">
           {/* Box 1  */}
           <div className="group rounded-xl bg-white text-[#0451a1] shadow-md border p-6 hover:py-10 hover:bg-[#0451a1] hover:text-white ease-in-out flex flex-col items-center text-center space-y-4 fade-in-bottom translate-y-10 transition-all duration-990">
@@ -65,7 +65,7 @@ const ContentSection = () => {
           </div>
           {/* box 4  */}
           <div className="group rounded-xl bg-[#0451a1] text-white shadow-md border p-6 hover:py-10 hover:bg-white hover:text-[#0451a1] ease-in-out flex flex-col items-center text-center space-y-4 fade-in-bottom translate-y-10 transition-all duration-990">
-            <Camera
+            <ArrowRightLeft
               size={50}
               className="text-white group-hover:text-[#0451a1]"
             />

@@ -21,9 +21,7 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-0 grid md:grid-cols-2 sm:grid-cols-1 items-center justify-center sm:gap-0 w-full px-24">
-        {/* Text Content */}
         <div className="flex flex-col items-center text-center mx-auto order-2 md:order-1 lg:pb-0 lg:px-2 px-10 pb-10 ">
           <h1 className="lg:text-[45px] text-[28px] font-extrabold text-blue-800 mb-4 font-bricolage animate__animated animate__fadeInUp">
             Selamat Datang di Universitas Catur Insan Cendekia
