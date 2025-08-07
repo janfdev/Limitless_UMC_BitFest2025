@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Dummy from "@/public/assets/dummy.jpg";
 import { Button } from "../ui/button";
