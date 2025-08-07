@@ -20,13 +20,11 @@ const StatsSection = () => {
           <span className="w-10 h-1 rounded bg-blue-500"></span>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6 py-10">
-        <div className="bg-[#1d4ed8] rounded-lg py-5 px-28 shadow text-white flex flex-col items-center gap-4 group hover:bg-secondary hover:shadow-md transition-all duration-300 hover:border hover:border-[#1d4ed8]">
-          <GraduationCapIcon
-            size={100}
-            className="group-hover:text-[#1d4ed8]"
-          />
-          <div className="flex flex-col gap-2 items-center justify-center group-hover:text-[#1d4ed8]">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
+        <div className="md:border-r-2 border-0 border-[#1d4ed8] text-[#1d4ed8] py-5 px-28 flex flex-col items-center gap-4">
+          <GraduationCapIcon size={100} />
+          <div className="flex flex-col gap-2 items-center justify-center">
             <p className="text-lg">Mahasiswa</p>
             <p className="text-xl font-semibold">
               <CountingNumber number={1000} />+
@@ -34,7 +32,7 @@ const StatsSection = () => {
           </div>
         </div>
 
-        <div className="bg-[#1d4ed8] rounded-lg p-5 shadow text-white flex flex-col items-center gap-4">
+        <div className="border-t-2 md:border-t-0 md:border-r-2 border-[#1d4ed8] py-5 px-28 text-[#1d4ed8] flex flex-col items-center gap-4">
           <SchoolIcon size={100} />
           <div className="flex flex-col gap-2 items-center justify-center">
             <p className="text-sm">Fakultas</p>
@@ -44,7 +42,7 @@ const StatsSection = () => {
           </div>
         </div>
 
-        <div className="bg-[#1d4ed8] rounded-lg p-5 shadow text-white flex flex-col items-center gap-4">
+        <div className="border-t-2 md:border-t-0 md:border-r-2 border-[#1d4ed8] py-5 px-28 text-[#1d4ed8] flex flex-col items-center gap-4">
           <BookIcon size={100} />
           <div className="flex flex-col gap-2 items-center justify-center">
             <p className="text-sm">Program Studi</p>
@@ -54,7 +52,7 @@ const StatsSection = () => {
           </div>
         </div>
 
-        <div className="bg-[#1d4ed8] rounded-lg p-5 shadow text-white flex flex-col items-center gap-4">
+        <div className="border-t-2 md:border-t-0 border-[#1d4ed8] py-5 px-28 text-[#1d4ed8] flex flex-col items-center gap-4">
           <UsersIcon size={100} />
           <div className="flex flex-col gap-2 items-center justify-center">
             <p className="text-sm">Lulusan</p>
