@@ -4,6 +4,7 @@ import React from "react";
 import Hero from "@/public/assets/heroo.jpg";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -18,12 +19,18 @@ const HeroSection = () => {
       />
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 text-white bg-black/50">
-        <h1 className="text-2xl md:text-4xl font-bold mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          error reiciendis iure eveniet provident dolorum modi. Asperiores
-          deserunt cum fugiat.
+        <h1 className="text-4xl md:text-7xl font-bold text-white text-center max-w-5xl mx-auto">
+          Wujudkan Impian, Bangun Karier, Mulai dari Sini.
         </h1>
-        <Button className="text-lg px-6 py-3 mt-2">Ayoo Daftar</Button>
+        <p className="text-lg text-white mt-4">
+          Bersama Universitas CIC, jadilah bagian dari perubahan masa depan
+          bangsa.
+        </p>
+        <Link href={"https://pmb.cic.ac.id/"}>
+          <Button className="mt-6 mx-auto bg-gradient-to-b from-blue-500 to-blue-900">
+            Ayoo Daftar
+          </Button>
+        </Link>
       </div>
     </section>
   );
