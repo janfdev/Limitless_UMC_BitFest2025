@@ -11,7 +11,7 @@ const ActivitySection = () => {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-extrabold md:text-3xl text-2xl">
-              Kegiatan Kampus
+              Berita & Kegiatan Kampus
             </h2>
           </div>
           <Button className="bg-yellow-500/90">Semua Kegiatan</Button>
