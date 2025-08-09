@@ -17,7 +17,7 @@ const StatsSection = () => {
           <University size={32} className="sm:size-10 text-white" />
         </div>
         <div className="flex flex-col">
-          <h3 className="font-semibold">Profil Singkat</h3>
+          <h2 className="font-semibold">Profil Singkat</h2>
           <span className="w-10 h-1 rounded bg-blue-500"></span>
         </div>
       </div>

@@ -193,6 +193,7 @@ export default function Header() {
             className="text-white hover:bg-transparent rounded-lg p-2 transition-colors duration-200 lg:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileTap={{ scale: 0.95 }}
+            aria-label="Button"
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6 " />
