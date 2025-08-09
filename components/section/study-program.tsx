@@ -9,41 +9,18 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Prodi } from "@/lib/type";
+import { TI, FEB, PS } from "@/lib/data";
 
-type Prodi = {
-  name: string;
-  label?: string;
-};
-
-const TI: Prodi[] = [
-  { name: "S1-Teknik Informatika" },
-  { name: "S1-Sistem Informasi" },
-  { name: "S1-DKV" },
-  { name: "D3-Manajemen Informatika" },
-];
-
-const FEB: Prodi[] = [
-  { name: "S1-Bisnis Digital", label: "New" },
-  { name: "S1-Manajemen" },
-  { name: "S1-Akuntansi" },
-  { name: "S1-Manajemen KRM (Kelas Karyawan)" },
-  { name: "D3-Manajemen Bisnis" },
-];
-
-const PS: Prodi[] = [
-  { name: "S1-Pendidikan Kepelatihan Olahraga", label: "New" },
-];
-
-// 🔹 Komponen Card Prodi supaya tidak mengulang-ulang struktur
 const ProdiList = ({ items }: { items: Prodi[] }) => (
   <div className="grid md:grid-cols-2 grid-cols-1 gap-5 ">
     {items.map((item, index) => (
       <div
         key={index}
-        className="flex items-center gap-2 rounded-lg hover:bg-blue-100 p-1 "
+        className="flex items-center gap-2 rounded-lg hover:bg-blue-100 p-2 "
       >
-        <div className="bg-blue-900 p-2 rounded-full">
-          <GraduationCap className="text-blue-300" />
+        <div className="bg-blue-700 p-2 rounded-full">
+          <GraduationCap className="text-white" />
         </div>
         <p>{item.name}</p>
         {item.label && (
@@ -58,8 +35,8 @@ const ProdiList = ({ items }: { items: Prodi[] }) => (
 
 const StudyProgram = () => {
   return (
-    <section className="min-h-screen mx-auto flex flex-col items-center">
-      <div className="flex items-center gap-2 text-2xl">
+    <section className="mx-auto max-w-7xl">
+      <div className="flex items-center justify-center gap-2 text-2xl">
         <div className="bg-blue-500 rounded-full p-2">
           <Book size={40} className="text-white" />
         </div>
@@ -70,13 +47,13 @@ const StudyProgram = () => {
       </div>
 
       {/* Content */}
-      <div className="grid md:grid-cols-2 grid-cols-1 mt-5 ">
-        <div className="flex items-center justify-center h-full px-5">
+      <div className="flex lg:flex-row md:flex-col flex-col mt-5 ">
+        <div className="flex items-center justify-center w-full h-full px-5">
           <Image
             src={Cover}
             alt="Image Program Studi"
             quality={100}
-            width={450}
+            width={500}
             className="rounded-4xl h-full bg-cover"
           />
         </div>

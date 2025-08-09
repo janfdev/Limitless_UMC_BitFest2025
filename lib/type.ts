@@ -6,3 +6,8 @@ export type BlogTypes = {
   image: string | StaticImageData;
   description: string;
 };
+
+export type Prodi = {
+  name: string;
+  label?: string;
+};
