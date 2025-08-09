@@ -1,18 +1,16 @@
 import ActivitySection from "@/components/section/activity-section";
-import BlogSection from "@/components/section/blog-section";
-import ContentSection from "@/components/section/content-section";
 import Header from "@/components/section/header";
 import HeroSection from "@/components/section/hero-section";
-import MajorSection from "@/components/section/major-section";
+import StatsSection from "@/components/section/stats-section";
+import StudyProgram from "@/components/section/study-program";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mx-auto">
       <Header />
       <HeroSection />
-      <ContentSection />
-      <BlogSection />
-      <MajorSection />
+      <StatsSection />
+      <StudyProgram />
       <ActivitySection />
     </main>
   );
