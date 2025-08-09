@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, EllipsisIcon, MapPin } from "lucide-react";
 import Cover from "@/public/assets/program-studi-image.jpg";
 
 const ActivitySection = () => {
@@ -10,118 +10,130 @@ const ActivitySection = () => {
       <div className=" mx-auto md:max-w-7xl w-auto">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="font-extrabold md:text-3xl text-2xl">
-              Kegiatan Kampus
+            <h2 className="font-bold md:text-3xl text-lg">
+              Berita & Kegiatan Kampus
             </h2>
           </div>
-          <Button className="bg-yellow-500/90">Semua Kegiatan</Button>
+          <Button className="bg-yellow-500/90" size={"sm"}>
+            <p className="md:block hidden">Semua Kegiatan</p>
+            <EllipsisIcon className="md:hidden block" />
+          </Button>
         </div>
-
-        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 mt-5 gap-5">
-          <div className="max-w-xs w-full bg-white rounded-lg">
-            <div className="p-3">
-              <Image
-                src={Cover}
-                alt="Kegiatan"
-                width={500}
-                height={500}
-                quality={100}
-                className="w-full rounded-xl mb-2"
-              />
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold">Kegiatan Penggalangan Dana</h3>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <span className="flex items-center gap-2">
-                    <MapPin className="text-blue-600" />
-                    <p className="font-medium text-sm">Kampus UCIC</p>
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="text-blue-600" />
-                    <p className="text-xs">12 Juli 2025</p>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-xs w-full bg-white rounded-lg">
-            <div className="p-3">
-              <Image
-                src={Cover}
-                alt="Kegiatan"
-                width={500}
-                height={500}
-                quality={100}
-                className="w-full rounded-xl mb-2"
-              />
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold">Kegiatan Penggalangan Dana</h3>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <span className="flex items-center gap-2">
-                    <MapPin className="text-blue-600" />
-                    <p className="font-medium text-sm">Kampus UCIC</p>
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="text-blue-600" />
-                    <p className="text-xs">12 Juli 2025</p>
-                  </span>
+        <div className="flex items-center justify-center">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-5 gap-5">
+            <div className="max-w-xs w-full bg-white rounded-lg">
+              <div className="p-3">
+                <Image
+                  src={Cover}
+                  alt="Kegiatan"
+                  width={500}
+                  height={500}
+                  quality={100}
+                  className="w-full rounded-xl mb-2"
+                />
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold">
+                      Kegiatan Penggalangan Dana
+                    </h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="flex items-center gap-2">
+                      <MapPin className="text-blue-600 w-5" />
+                      <p className="font-medium text-sm">Kampus UCIC</p>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar className="text-blue-600 w-5" />
+                      <p className="text-sm">12 Juli 2025</p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="max-w-xs w-full bg-white rounded-lg">
-            <div className="p-3">
-              <Image
-                src={Cover}
-                alt="Kegiatan"
-                width={500}
-                height={500}
-                quality={100}
-                className="w-full rounded-xl mb-2"
-              />
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold">Kegiatan Penggalangan Dana</h3>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <span className="flex items-center gap-2">
-                    <MapPin className="text-blue-600" />
-                    <p className="font-medium text-sm">Kampus UCIC</p>
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="text-blue-600" />
-                    <p className="text-xs">12 Juli 2025</p>
-                  </span>
+            <div className="max-w-xs w-full bg-white rounded-lg">
+              <div className="p-3">
+                <Image
+                  src={Cover}
+                  alt="Kegiatan"
+                  width={500}
+                  height={500}
+                  quality={100}
+                  className="w-full rounded-xl mb-2"
+                />
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold">
+                      Kegiatan Penggalangan Dana
+                    </h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="flex items-center gap-2">
+                      <MapPin className="text-blue-600 w-5" />
+                      <p className="font-medium text-sm">Kampus UCIC</p>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar className="text-blue-600 w-5" />
+                      <p className="text-sm">12 Juli 2025</p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="max-w-xs w-full bg-white rounded-lg">
-            <div className="p-3">
-              <Image
-                src={Cover}
-                alt="Kegiatan"
-                width={500}
-                height={500}
-                quality={100}
-                className="w-full rounded-xl mb-2"
-              />
-              <div className="flex flex-col gap-3">
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-semibold">Kegiatan Penggalangan Dana</h3>
+            <div className="max-w-xs w-full bg-white rounded-lg">
+              <div className="p-3">
+                <Image
+                  src={Cover}
+                  alt="Kegiatan"
+                  width={500}
+                  height={500}
+                  quality={100}
+                  className="w-full rounded-xl mb-2"
+                />
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold">
+                      Kegiatan Penggalangan Dana
+                    </h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="flex items-center gap-2">
+                      <MapPin className="text-blue-600 w-5" />
+                      <p className="font-medium text-sm">Kampus UCIC</p>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar className="text-blue-600 w-5" />
+                      <p className="text-sm">12 Juli 2025</p>
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <span className="flex items-center gap-2">
-                    <MapPin className="text-blue-600" />
-                    <p className="font-medium text-sm">Kampus UCIC</p>
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="text-blue-600" />
-                    <p className="text-xs">12 Juli 2025</p>
-                  </span>
+              </div>
+            </div>
+            <div className="max-w-xs w-full bg-white rounded-lg">
+              <div className="p-3">
+                <Image
+                  src={Cover}
+                  alt="Kegiatan"
+                  width={500}
+                  height={500}
+                  quality={100}
+                  className="w-full rounded-xl mb-2"
+                />
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-semibold">
+                      Kegiatan Penggalangan Dana
+                    </h3>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <span className="flex items-center gap-2">
+                      <MapPin className="text-blue-600 w-5" />
+                      <p className="font-medium text-sm">Kampus UCIC</p>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Calendar className="text-blue-600 w-5" />
+                      <p className="text-sm">12 Juli 2025</p>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
