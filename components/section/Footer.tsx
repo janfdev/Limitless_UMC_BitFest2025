@@ -7,7 +7,6 @@ import {
   Dribbble,
 } from "lucide-react";
 import Link from "next/link";
-import { Rocket } from "lucide-react";
 import Image from "next/image";
 import Logo from "@/app/logo.png";
 
