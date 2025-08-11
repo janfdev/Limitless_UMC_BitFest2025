@@ -1,23 +1,17 @@
 import React from "react";
-import { Button } from "../ui/button";
 import Image from "next/image";
-import { Calendar, EllipsisIcon, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import Cover from "@/public/assets/program-studi-image.jpg";
 
 const ActivitySection = () => {
   return (
     <section className="bg-muted px-10 mt-10 py-5">
-      <div className=" mx-auto md:max-w-7xl w-auto">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="font-bold md:text-3xl text-lg">
-              Berita & Kegiatan Kampus
-            </h2>
+      <div className="mx-auto md:max-w-7xl w-auto">
+        <div className="flex items-center justify-center gap-2 text-2xl">
+          <div className="flex flex-col items-center justify-center group">
+            <h1 className="font-semibold text-blue-600 ">Berita & Kegiatan</h1>
+            <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
           </div>
-          <Button className="bg-yellow-500/90" size={"sm"}>
-            <p className="md:block hidden">Semua Kegiatan</p>
-            <EllipsisIcon className="md:hidden block" />
-          </Button>
         </div>
         <div className="flex items-center justify-center">
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-5 gap-5">
