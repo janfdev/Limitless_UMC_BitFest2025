@@ -1,11 +1,4 @@
-import {
-  Twitter,
-  Instagram,
-  Youtube,
-  Facebook,
-  Github,
-  Dribbble,
-} from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/logo.png";
@@ -51,17 +44,13 @@ const sections = [
 
 // Define social links as a constant
 const socialLinks = [
-  { icon: Twitter, name: "Twitter", href: "#" },
   { icon: Instagram, name: "Instagram", href: "#" },
   { icon: Youtube, name: "YouTube", href: "#" },
-  { icon: Facebook, name: "Facebook", href: "#" },
-  { icon: Github, name: "GitHub", href: "#" },
-  { icon: Dribbble, name: "Dribbble", href: "#" },
 ];
 
 export default function Footer03() {
   return (
-    <footer className="container mx-auto py-16">
+    <footer className=" mt-10 mx-auto py-16">
       <div className="space-y-8 px-4 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Logo and Description */}
@@ -114,7 +103,7 @@ export default function Footer03() {
           </div>
         </div>
         <p className="text-xs text-muted-foreground">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2025. Universitas Catur Insan Cendekia. All rights reserved.
         </p>
       </div>
     </footer>

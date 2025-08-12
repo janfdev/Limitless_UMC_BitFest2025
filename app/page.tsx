@@ -1,22 +1,20 @@
 import ActivitySection from "@/components/section/activity-section";
 import Footer03 from "@/components/section/Footer";
-import FasilitasSection from "@/components/section/fasilitas-section";
+import FacilitySection from "@/components/section/facility-section";
 import Header from "@/components/section/header";
 import HeroSection from "@/components/section/hero-section";
-import StatsSection from "@/components/section/stats-section";
 import StudyProgram from "@/components/section/study-program";
-import CTA01 from "@/components/ui/CTA";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
     <main className="mx-auto">
       <Header />
       <HeroSection />
-      <StatsSection />
       <StudyProgram />
       <ActivitySection />
-      <FasilitasSection/>
-      <CTA01 />
+      <FacilitySection />
+      <CTA />
       <Footer03 />
     </main>
   );
