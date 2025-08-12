@@ -16,14 +16,15 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full  ">
+    <section className="relative bg-white h-screen w-full ">
       <Image
         src={Hero}
         alt="Hero Image"
         fill
         quality={100}
-        className="object-cover"
+        className="object-cover" // rounded-b-[100px]
         loading="lazy"
+
       />
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 text-white bg-black/50">
