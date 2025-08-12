@@ -5,7 +5,7 @@ import Cover from "@/public/assets/program-studi-image.jpg";
 
 const ActivitySection = () => {
   return (
-    <section className="bg-muted px-10 mt-10 py-5">
+    <section className="bg-muted px-10 mt-5 py-20">
       <div className="mx-auto md:max-w-7xl w-auto">
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center group">

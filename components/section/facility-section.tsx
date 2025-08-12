@@ -1,19 +1,20 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Cover from "@/public/assets/program-studi-image.jpg";
+import SportCenter from "@/public/assets/sport_center.jpg";
 
-const categories = ["Akademik", "Penunjang", "Layanan"];
 const fasilitas = [
-  { title: "Lab Komputer", img: "/lab.jpg" },
-  { title: "Lab Komputer", img: "/lab.jpg" },
-  { title: "Lab Komputer", img: "/lab.jpg" },
-  { title: "Lab Komputer", img: "/lab.jpg" },
+  { title: "Lab Komputer", img: Cover },
+  { title: "Convention Hall", img: Cover },
+  { title: "Auditorium", img: Cover },
+  { title: "Ruang Kelas", img: Cover },
+  { title: "Incubator Center", img: Cover },
+  { title: "Ruang Podcast", img: Cover },
+  { title: "Perpustakaan", img: Cover },
+  { title: "Taman Cipto Sport Center", img: SportCenter },
 ];
 
 export default function FacilitySection() {
-  const [active, setActive] = useState("Akademik");
-
   return (
     <section className="py-10 px-4">
       {/* Title */}
@@ -24,32 +25,15 @@ export default function FacilitySection() {
         </h2>
       </div>
 
-      <div className="flex justify-center mb-8">
-        <div className="bg-gray-100 rounded-full px-3 py-1 flex gap-2 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`px-3 py-1 rounded-full font-medium text-sm sm:text-base transition-colors ${
-                active === cat
-                  ? "bg-white text-blue-700 shadow"
-                  : "text-gray-600 hover:text-blue-600"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      {/* Facilities */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto mt-10">
         {fasilitas.map((item, idx) => (
           <div
             key={idx}
             className="relative overflow-hidden rounded-2xl shadow hover:shadow-lg transition-shadow"
           >
             <Image
-              src={Cover}
+              src={item.img}
               alt={item.title}
               width={430}
               height={380}

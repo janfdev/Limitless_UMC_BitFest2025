@@ -4,7 +4,7 @@ import FacilitySection from "@/components/section/facility-section";
 import Header from "@/components/section/header";
 import HeroSection from "@/components/section/hero-section";
 import StudyProgram from "@/components/section/study-program";
-import CTA01 from "@/components/ui/CTA";
+import CTA from "@/components/ui/CTA";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <CTA01 />
+      <CTA />
       <Footer03 />
     </main>
   );

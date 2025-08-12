@@ -1,13 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Cover from "@/public/assets/program-studi-image.jpg";
-import {
-  Book,
-  BookCheck,
-  BriefcaseBusiness,
-  Cpu,
-  GraduationCap,
-} from "lucide-react";
+import { BookCheck, BriefcaseBusiness, Cpu, GraduationCap } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Prodi } from "@/lib/type";
 import { TI, FEB, PS } from "@/lib/data";
@@ -35,7 +29,7 @@ const ProdiList = ({ items }: { items: Prodi[] }) => (
 
 const StudyProgram = () => {
   return (
-    <section className="mx-auto max-w-7xl mt-5">
+    <section className="mx-auto max-w-7xl mt-40">
       <div className="flex items-center justify-center gap-2 text-2xl">
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-semibold text-blue-600">Program Studi</h1>
