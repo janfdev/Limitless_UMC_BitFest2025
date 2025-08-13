@@ -15,8 +15,8 @@ export default function Home() {
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <CTA />
       <AfiliasiSection/>
+      <CTA />
       <Footer03 />
     </main>
   );
