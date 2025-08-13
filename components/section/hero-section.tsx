@@ -41,7 +41,7 @@ const HeroSection = () => {
         </Link>
       </div>
 
-      <section className="w-full mx-auto flex flex-col items-center mt-5 px-4 absolute md:-bottom-40">
+      <section className="w-full mx-auto flex flex-col items-center mt-5 px-4 lg:absolute relative md:-bottom-40">
 
 
         {/* Stats Grid */}
