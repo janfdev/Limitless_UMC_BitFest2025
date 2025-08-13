@@ -5,14 +5,6 @@ import Hero from "@/public/assets/heroo.jpg";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { CountingNumber } from "../ui/count-number";
-import {
-  BookIcon,
-  GraduationCapIcon,
-  SchoolIcon,
-  University,
-  UsersIcon,
-} from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -41,53 +33,7 @@ const HeroSection = () => {
         </Link>
       </div>
 
-      <section className="w-full mx-auto flex flex-col items-center mt-5 px-4 lg:absolute relative md:-bottom-40">
 
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10 w-full max-w-6xl z-50">
-          {/* Card Item */}
-          <div className="rounded-md shadow-sm bg-[#fffcfc] text-primary py-5 px-6 sm:px-12 lg:px-20 flex flex-col items-center gap-4">
-            <GraduationCapIcon className="w-16 h-16 sm:w-20 sm:h-20" />
-            <div className="flex flex-col gap-2 items-center">
-              <h3 className="text-base sm:text-lg">Mahasiswa</h3>
-              <p className="text-lg sm:text-xl font-semibold">
-                <CountingNumber number={1000} />+
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-md shadow-sm bg-[#fffcfc] py-5 px-6 sm:px-12 lg:px-20 text-primary flex flex-col items-center gap-4">
-            <SchoolIcon className="w-16 h-16 sm:w-20 sm:h-20" />
-            <div className="flex flex-col gap-2 items-center">
-              <h3 className="text-base sm:text-lg">Fakultas</h3>
-              <p className="text-lg sm:text-xl font-semibold">
-                <CountingNumber number={5} />+
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-md shadow-sm bg-[#fffcfc] py-5 px-6 sm:px-12 lg:px-20 text-primary flex flex-col items-center gap-4">
-            <BookIcon className="w-16 h-16 sm:w-20 sm:h-20" />
-            <div className="flex flex-col gap-2 items-center">
-              <h3 className="text-base sm:text-lg">Program Studi</h3>
-              <p className="text-lg sm:text-xl font-semibold">
-                <CountingNumber number={10} />+
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-md shadow-sm bg-[#fffcfc] py-5 px-6 sm:px-12 lg:px-20 text-primary flex flex-col items-center gap-4">
-            <UsersIcon className="w-16 h-16 sm:w-20 sm:h-20" />
-            <div className="flex flex-col gap-2 items-center">
-              <h3 className="text-base sm:text-lg">Lulusan</h3>
-              <p className="text-lg sm:text-xl font-semibold">
-                <CountingNumber number={2000} />+
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
   );
 };

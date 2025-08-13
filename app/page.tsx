@@ -6,17 +6,19 @@ import HeroSection from "@/components/section/hero-section";
 import StudyProgram from "@/components/section/study-program";
 import CTA from "@/components/CTA";
 import AfiliasiSection from "@/components/section/afiliasi-section";
+import StatsSection from "@/components/section/stats-section";
 
 export default function Home() {
   return (
     <main className="mx-auto">
       <Header />
       <HeroSection />
+      <StatsSection />
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <AfiliasiSection/>
       <CTA />
+      <AfiliasiSection />
       <Footer03 />
     </main>
   );
