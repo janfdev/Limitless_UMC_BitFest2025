@@ -18,15 +18,24 @@ export default function FacilitySection() {
   return (
     <section className="py-10 px-4">
       {/* Title */}
-      <div className="text-center mb-6">
-        <h2 className="text-lg sm:text-2xl font-semibold text-blue-700 relative inline-block">
-          Fasilitas Campus
-          <span className="absolute left-1/2 -translate-x-1/2 -bottom-1 w-12 h-[3px] bg-yellow-400 rounded-full"></span>
+      <section className="pb-20 pt-20 md:pb-20 md:pt-32 container mx-auto">
+      <div className="text-center space-y-4">
+        <h2 className="xl:text-6xl/none text-3xl font-bold sm:text-5xl tracking-tight">
+          {/* Fasilitas Lengkap dan Modern */}
+          Complete and Modern Facilities
         </h2>
+        <p className="text-xl text-muted-foreground pt-1">
+          Do not waste time on Stripe subscriptions or designing a pricing
+          section...
+        </p>
       </div>
+      {/* <div className="mt-10 flex items-center justify-center w-full">
+        <Button>Get Started</Button>
+      </div> */}
+    </section>
 
       {/* Facilities */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto mt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mt-10">
         {fasilitas.map((item, idx) => (
           <div
             key={idx}
