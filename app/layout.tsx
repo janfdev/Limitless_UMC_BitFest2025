@@ -53,9 +53,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
-    ],
+    icon: "/logo.png",
   },
 };
 
