@@ -10,7 +10,6 @@ type ActivityListProps = {
   date: string;
 };
 
-// Variants reusable untuk item (fade + slide + subtle scale)
 export const activityItemVariants: Variants = {
   hidden: { opacity: 0, y: 16, scale: 0.98 },
   show: {
@@ -28,10 +27,8 @@ const ActivityList = ({ image, title, place, date }: ActivityListProps) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="max-w-xs w-full bg-white rounded-lg shadow-sm ring-1 ring-black/5 overflow-hidden"
-      whileHover={{
-        y: -4,
-      }}
+      className="w-full bg-white rounded-lg shadow-sm ring-1 ring-black/5 overflow-hidden"
+      whileHover={{ y: -4 }}
       whileTap={{ scale: 0.995 }}
     >
       <div className="p-3">

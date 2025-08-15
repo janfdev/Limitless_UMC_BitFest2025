@@ -18,9 +18,9 @@ export default function Home() {
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <CTA />
       <AfiliasiSection />
       <AchievementSection />
+      <CTA />
       <Footer03 />
     </main>
   );

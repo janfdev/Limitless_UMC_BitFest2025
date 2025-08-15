@@ -35,7 +35,7 @@ export default function CTA() {
   ];
 
   return (
-    <section className="flex items-center justify-center mx-5">
+    <section className="flex items-center justify-center mx-5 py-5">
       <div className="relative overflow-hidden rounded-3xl container mx-auto px-5 py-16 md:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
         <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
