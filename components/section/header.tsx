@@ -140,7 +140,7 @@ export default function Header() {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        className="border-border bg-background/95 absolute top-full left-0 mt-2 w-64 overflow-hidden rounded-xl border shadow-xl backdrop-blur-lg"
+                        className="border-border bg-primary absolute top-full left-0 mt-2 w-64 overflow-hidden rounded-xl border shadow-xl backdrop-blur-lg"
                         variants={dropdownVariants}
                         initial="hidden"
                         animate="visible"
@@ -151,16 +151,11 @@ export default function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="hover:bg-muted block px-4 py-3 transition-colors duration-200"
+                            className="hover:bg-blue-300 block px-4 py-2 transition-colors duration-200"
                           >
-                            <div className="text-foreground font-medium">
+                            <h2 className="text-white font-medium">
                               {dropdownItem.name}
-                            </div>
-                            {dropdownItem.description && (
-                              <div className="text-muted-foreground text-sm">
-                                {dropdownItem.description}
-                              </div>
-                            )}
+                            </h2>
                           </Link>
                         ))}
                       </motion.div>

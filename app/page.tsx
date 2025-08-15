@@ -7,6 +7,7 @@ import StudyProgram from "@/components/section/study-program";
 import CTA from "@/components/CTA";
 import AfiliasiSection from "@/components/section/afiliasi-section";
 import StatsSection from "@/components/section/stats-section";
+import AchievementSection from "@/components/section/achievement-section";
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <CTA />
       <AfiliasiSection />
+      <AchievementSection />
+      <CTA />
       <Footer03 />
     </main>
   );
