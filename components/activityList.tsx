@@ -6,6 +6,7 @@ import { motion, type Variants } from "framer-motion";
 type ActivityListProps = {
   image: string | StaticImageData;
   title: string;
+  deskripsi: string;
   place: string;
   date: string;
 };
@@ -20,7 +21,7 @@ export const activityItemVariants: Variants = {
   },
 };
 
-const ActivityList = ({ image, title, place, date }: ActivityListProps) => {
+const ActivityList = ({ image, title, deskripsi, place, date }: ActivityListProps) => {
   return (
     <motion.article
       variants={activityItemVariants}
@@ -50,8 +51,9 @@ const ActivityList = ({ image, title, place, date }: ActivityListProps) => {
         </motion.div>
 
         <div className="flex flex-col gap-3 mt-2">
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-1.5 px-2">
             <h3 className="font-semibold leading-snug">{title}</h3>
+            <h4 className="font-sm text-[13px] text-gray-500 leading-snug">{deskripsi}</h4>
           </div>
 
           <div className="flex flex-col gap-2 text-sm">

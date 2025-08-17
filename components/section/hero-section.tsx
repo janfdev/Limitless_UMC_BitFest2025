@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Hero from "@/public/assets/heroo.jpg";
+import Hero from "@/public/assets/Gedung A (4).jpeg";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -21,9 +21,9 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 z-10 flex items-center justify-start">
         {/* Gradient overlay */}
-        <div className="w-full h-full bg-gradient-to-r from-black/90 via-black/60 to-transparent flex items-center px-6 md:px-16">
+        <div className="w-full h-full bg-gradient-to-r from-black/90 via-black/60 to-transparent flex items-center px-6 md:px-20 pt-10">
           <div className="max-w-xl text-left">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
               Raih Masa Depan Cemerlang <br /> Bersama{" "}
               <span className="text-blue-400">Universitas CIC</span>
             </h1>
