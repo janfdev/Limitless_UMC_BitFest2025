@@ -131,7 +131,7 @@ const ActivitySection = () => {
 
         <div className="relative mt-5">
           {/* Slide Left */}
-          <div className="absolute -left-12 top-1/2 -translate-y-1/2 z-10">
+          <div className="absolute -left-2 top-1/2 -translate-y-1/2 z-10">
             <Button
               size={"icon"}
               className="text-white cursor-pointer rounded-full "
@@ -142,7 +142,7 @@ const ActivitySection = () => {
             </Button>
           </div>
           {/* Slide Right */}
-          <div className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 ">
+          <div className="absolute -right-2 top-1/2 -translate-y-1/2 z-10 ">
             <Button
               size="icon"
               className="text-white cursor-pointer rounded-full"

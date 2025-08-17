@@ -94,7 +94,7 @@ export default function Header() {
         boxShadow: isScrolled ? "0 8px 32px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <div className="mx-auto bg-primary px-6 sm:px-16 lg:px-20">
+      <div className="mx-auto bg-primary px-8 sm:px-16 lg:px-20">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <div className="flex items-center space-x-2">
             <Link
