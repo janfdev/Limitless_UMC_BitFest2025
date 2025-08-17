@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import Cover from "@/public/assets/program-studi-image.jpg";
+import Labkom from "@/public/assets/Ruang Lab Komputer.jpeg";
+import Auditorium from "@/public/assets/Ruang Auditorium.jpeg";
+import Kelas from "@/public/assets/Ruang Kelas.jpeg";
+import Perpustakaan from "@/public/assets/Perpustakaan.jpeg";
+import Programming from "@/public/assets/Lab Programming.jpeg";
 import SportCenter from "@/public/assets/sport_center.jpg";
 import {
   MotionConfig,
@@ -11,13 +16,13 @@ import {
 } from "framer-motion";
 
 const fasilitas = [
-  { title: "Lab Komputer", img: Cover },
+  { title: "Lab Komputer", img: Labkom },
   { title: "Convention Hall", img: Cover },
-  { title: "Auditorium", img: Cover },
-  { title: "Ruang Kelas", img: Cover },
-  { title: "Incubator Center", img: Cover },
+  { title: "Auditorium", img: Auditorium },
+  { title: "Ruang Kelas", img: Kelas },
+  { title: "Lab Programming", img: Programming },
   { title: "Ruang Podcast", img: Cover },
-  { title: "Perpustakaan", img: Cover },
+  { title: "Perpustakaan", img: Perpustakaan },
   { title: "Taman Cipto Sport Center", img: SportCenter },
 ];
 

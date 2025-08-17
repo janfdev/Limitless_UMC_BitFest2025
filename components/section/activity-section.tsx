@@ -13,6 +13,7 @@ const ActivitySection = () => {
     id: i + 1,
     image: Cover,
     title: "Kegiatan Penggalangan Dana",
+    deskripsi: "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
     place: "Kampus UCIC",
     date: "12 Juli 2025",
   }));
@@ -176,6 +177,7 @@ const ActivitySection = () => {
                   <ActivityList
                     image={it.image}
                     title={it.title}
+                    deskripsi={it.deskripsi}
                     place={it.place}
                     date={it.date}
                   />

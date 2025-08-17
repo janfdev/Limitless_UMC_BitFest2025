@@ -18,7 +18,6 @@ export default function Home() {
       <StudyProgram />
       <ActivitySection />
       <FacilitySection />
-      <AfiliasiSection />
       <AchievementSection />
       <CTA />
       <Footer03 />
