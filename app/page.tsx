@@ -5,9 +5,10 @@ import Header from "@/components/section/header";
 import HeroSection from "@/components/section/hero-section";
 import StudyProgram from "@/components/section/study-program";
 import CTA from "@/components/CTA";
-import AfiliasiSection from "@/components/section/afiliasi-section";
 import StatsSection from "@/components/section/stats-section";
 import AchievementSection from "@/components/section/achievement-section";
+import PartnershipSection from "@/components/section/partnership-section";
+import { partners } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -19,6 +20,10 @@ export default function Home() {
       <ActivitySection />
       <FacilitySection />
       <AchievementSection />
+      <PartnershipSection
+        cta={{ label: "Jadi Mitra", href: "/kerjasama" }}
+        partners={partners}
+      />
       <CTA />
       <Footer03 />
     </main>

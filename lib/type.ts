@@ -11,3 +11,10 @@ export type Prodi = {
   name: string;
   label?: string;
 };
+
+export type Partner = {
+  name: string;
+  logoSrc?: string;
+  url?: string;
+  accentClass: string;
+};
