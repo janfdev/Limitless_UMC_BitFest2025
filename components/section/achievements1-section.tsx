@@ -82,7 +82,6 @@ const AchievementSection2 = () => {
     hover: { y: -4, scale: 1.01, transition: { duration: 0.2 } },
   };
 
-  // Total “halaman” untuk dots indikator
   const totalSteps = Math.max(cards.length - cardsPerPage + 1, 1);
   const currentStep = Math.min(startIndex + 1, totalSteps);
 
@@ -96,12 +95,10 @@ const AchievementSection2 = () => {
         <span className="w-16 h-1 rounded-full bg-yellow-400" />
       </div>
 
-      {/* Decorative gradients */}
       <div className="relative">
         <div className="pointer-events-none absolute -top-8 -left-10 h-44 w-44 rounded-full bg-blue-300/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-8 -right-10 h-48 w-48 rounded-full bg-yellow-300/20 blur-3xl" />
 
-        {/* Track (cards) */}
         <div className="relative overflow-hidden">
           <AnimatePresence mode="wait">
             <div
@@ -127,11 +124,9 @@ const AchievementSection2 = () => {
                     "transition-transform",
                   ].join(" ")}
                 >
-                  {/* Gradient header stripe */}
                   <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-yellow-400" />
 
                   <div className="flex items-center gap-4 md:gap-5">
-                    {/* Image wrapper */}
                     <div className="relative shrink-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50 to-yellow-50 ring-1 ring-black/5 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 overflow-hidden">
                       <Image
                         src={card.image}
@@ -143,7 +138,6 @@ const AchievementSection2 = () => {
                       />
                     </div>
 
-                    {/* Texts */}
                     <div className="min-w-0">
                       <h3 className="text-base md:text-lg font-semibold text-blue-900 truncate">
                         {card.name}
@@ -157,7 +151,6 @@ const AchievementSection2 = () => {
                     </div>
                   </div>
 
-                  {/* subtle highlight on hover */}
                   <div className="pointer-events-none absolute -bottom-16 -right-10 w-40 h-40 rounded-full bg-blue-300/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.article>
               ))}

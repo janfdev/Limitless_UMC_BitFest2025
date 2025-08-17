@@ -26,7 +26,6 @@ function PartnerCard({ partner }: { partner: Partner }) {
       transition={{ type: "spring", stiffness: 280, damping: 24 }}
       className="group relative overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/40 backdrop-blur supports-[backdrop-filter]:bg-white/40 p-6 shadow-sm hover:shadow-md"
     >
-      {/* Glow */}
       <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
         <div
           className={`absolute -top-24 -right-20 h-36 w-36 rounded-full blur-2xl ${partner.accentClass}`}
@@ -55,7 +54,6 @@ function PartnerCard({ partner }: { partner: Partner }) {
             <p className="truncate font-semibold text-slate-800 dark:text-slate-100">
               {partner.name}
             </p>
-            {/* <TierBadge tier={partner.tier} /> */}
           </div>
           {partner.url && (
             <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
@@ -116,7 +114,6 @@ export default function PartnershipSection({
         </p>
       </div>
 
-      {/* Grid */}
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {topFive.map((p) => (
           <PartnerCard key={p.name} partner={p} />
