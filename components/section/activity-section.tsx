@@ -13,7 +13,8 @@ const ActivitySection = () => {
     id: i + 1,
     image: Cover,
     title: "Kegiatan Penggalangan Dana",
-    deskripsi: "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
+    deskripsi:
+      "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
     place: "Kampus UCIC",
     date: "12 Juli 2025",
   }));
@@ -128,35 +129,30 @@ const ActivitySection = () => {
           </div>
         </div>
 
-        {/* VIEWPORT */}
         <div className="relative mt-5">
-          {/* Tombol kiri */}{" "}
+          {/* Slide Left */}
           <div className="absolute -left-2 top-1/2 -translate-y-1/2 z-10">
-            {" "}
             <Button
               size="icon"
-              className="text-white"
+              className="text-white cursor-pointer"
               onClick={handlePrev}
               disabled={isAtStart}
             >
-              {" "}
-              <ArrowLeft />{" "}
-            </Button>{" "}
-          </div>{" "}
-          {/* Tombol kanan */}{" "}
+              <ArrowLeft />
+            </Button>
+          </div>
+          {/* Slide Right */}
           <div className="absolute -right-2 top-1/2 -translate-y-1/2 z-10">
-            {" "}
             <Button
               size="icon"
-              className="text-white"
+              className="text-white cursor-pointer"
               onClick={handleNext}
               disabled={isAtEnd}
             >
-              {" "}
-              <ArrowRight />{" "}
+              <ArrowRight />
             </Button>{" "}
           </div>
-          {/* Container + Track */}
+          {/* Container  */}
           <div ref={containerRef} className="overflow-hidden">
             <motion.div
               ref={trackRef}
@@ -214,7 +210,6 @@ const ActivitySection = () => {
             href="/selengkapnya"
             className="group relative inline-block isolate"
           >
-            {/* background kuning yang dianimasikan */}
             <span
               aria-hidden
               className="absolute inset-0 z-0 rounded-md bg-yellow-400
@@ -225,7 +220,6 @@ const ActivitySection = () => {
                  group-hover:shadow-none
                  [will-change:transform]"
             />
-            {/* tombol biru di depan */}
             <Button
               className="relative z-10 bg-blue-700 text-white rounded-md
                  px-6 py-3 font-semibold shadow-md
@@ -236,27 +230,6 @@ const ActivitySection = () => {
             </Button>
           </Link>
         </div>
-        {/* <div className="flex items-end mt-5 justify-end w-full">
-          <Link href="/selengkapnya">
-            <Button
-              className="
-        bg-[#fbca1f] text-black font-black text-[18px]
-        px-[1.3em] py-[0.6em] rounded-[0.4em]
-        border-[3px] border-black
-        shadow-[0.1em_0.1em_0_0_#000]
-        transition-all duration-150 transform-gpu
-        hover:-translate-x-[0.05em] hover:-translate-y-[0.05em]
-        hover:shadow-[0.15em_0.15em_0_0_#000]
-        active:translate-x-[0.05em] active:translate-y-[0.05em]
-        active:shadow-[0.05em_0.05em_0_0_#000]
-        focus-visible:outline-none focus-visible:ring-2
-        focus-visible:ring-black focus-visible:ring-offset-2
-      "
-            >
-              Selengkapnya
-            </Button>
-          </Link>
-        </div> */}
       </div>
     </section>
   );
