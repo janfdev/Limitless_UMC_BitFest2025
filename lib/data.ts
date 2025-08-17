@@ -28,22 +28,22 @@ export const afiliasi = [
 ];
 
 export const TI: Prodi[] = [
-  { name: "S1-Teknik Informatika" },
-  { name: "S1-Sistem Informasi" },
-  { name: "S1-DKV" },
-  { name: "D3-Manajemen Informatika" },
+  { id: "ti", name: "S1-Teknik Informatika" },
+  { id: "si", name: "S1-Sistem Informasi" },
+  { id: "dkv", name: "S1-DKV" },
+  { id: "mi", name: "D3-Manajemen Informatika" },
 ];
 
 export const FEB: Prodi[] = [
-  { name: "S1-Bisnis Digital", label: "New" },
-  { name: "S1-Manajemen" },
-  { name: "S1-Akuntansi" },
-  { name: "S1-Manajemen KRM (Kelas Karyawan)" },
-  { name: "D3-Manajemen Bisnis" },
+  { id: "bi", name: "S1-Bisnis Digital", label: "New" },
+  { id: "mn", name: "S1-Manajemen" },
+  { id: "ak", name: "S1-Akuntansi" },
+  { id: "mnKRM", name: "S1-Manajemen KRM (Kelas Karyawan)" },
+  { id: "mb", name: "D3-Manajemen Bisnis" },
 ];
 
 export const PS: Prodi[] = [
-  { name: "S1-Pendidikan Kepelatihan Olahraga", label: "New" },
+  { id: "pko", name: "S1-Pendidikan Kepelatihan Olahraga", label: "New" },
 ];
 
 export const partners: Partner[] = [

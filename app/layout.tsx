@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     template: "%s | Catur Insan Cendekia University Cirebon",
   },
   description: siteDesc,
+  icons: {
+    icon: "/logo.png",
+  },
   keywords: [
     "Universitas Cirebon",
     "UCIC",
@@ -51,9 +54,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
-  },
-  icons: {
-    icon: "/logo.png",
   },
 };
 

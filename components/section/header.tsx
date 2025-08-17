@@ -25,19 +25,21 @@ const navItems: NavItem[] = [
     hasDropdown: true,
     dropdownItems: [
       {
-        name: "Faculty of Technology and Information (FTI)",
-        href: "/facult-fti",
-        description: "semangat masuk IT",
+        name: "Fakultas Teknologi dan Informasi",
+        href: "/fakultas-fti",
       },
       {
-        name: "Faculty of Economics and Business",
-        href: "/facult-feb",
-        description: "Belajar akuntansi gams",
+        name: "Fakultas Ekonomi dan Bisnis",
+        href: "/fakultas-feb",
+      },
+      {
+        name: "Fakultas Pendidikan dan Sains",
+        href: "/fakultas-ps",
       },
     ],
   },
-  { name: "Aktifitas", href: "/activity" },
-  { name: "Fasilitas", href: "/facility" },
+  { name: "Aktifitas", href: "/aktifitas" },
+  { name: "Fasilitas", href: "/fasilitas" },
 ];
 
 export default function Header() {
@@ -92,7 +94,7 @@ export default function Header() {
         boxShadow: isScrolled ? "0 8px 32px rgba(0, 0, 0, 0.1)" : "none",
       }}
     >
-      <div className="mx-auto bg-primary px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto bg-primary px-6 sm:px-16 lg:px-20">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <div className="flex items-center space-x-2">
             <Link
@@ -151,9 +153,9 @@ export default function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="hover:bg-blue-300 block px-4 py-2 transition-colors duration-200"
+                            className="hover:bg-yellow-500 group block px-4 py-2 transition-colors duration-200"
                           >
-                            <h2 className="text-white font-medium">
+                            <h2 className="text-white group-hover:text-white font-medium">
                               {dropdownItem.name}
                             </h2>
                           </Link>
@@ -198,6 +200,7 @@ export default function Header() {
           </motion.button>
         </div>
 
+        {/* UI Mobile */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -236,7 +239,7 @@ export default function Header() {
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
-                              className="pl-4 space-y-2"
+                              className="space-y-2 bg-primary rounded-xl overflow-hidden"
                               variants={dropdownVariants}
                               initial="hidden"
                               animate="visible"
@@ -247,10 +250,12 @@ export default function Header() {
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className="block py-2 text-sm hover:underline"
+                                  className="block md:p-3 p-2 text-sm transition-colors hover:bg-yellow-500 group"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                  {dropdownItem.name}
+                                  <h4 className="text-white ">
+                                    {dropdownItem.name}
+                                  </h4>
                                 </Link>
                               ))}
                             </motion.div>

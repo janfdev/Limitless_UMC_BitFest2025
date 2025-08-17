@@ -131,10 +131,10 @@ const ActivitySection = () => {
 
         <div className="relative mt-5">
           {/* Slide Left */}
-          <div className="absolute -left-2 top-1/2 -translate-y-1/2 z-10">
+          <div className="absolute -left-12 top-1/2 -translate-y-1/2 z-10">
             <Button
-              size="icon"
-              className="text-white cursor-pointer"
+              size={"icon"}
+              className="text-white cursor-pointer rounded-full "
               onClick={handlePrev}
               disabled={isAtStart}
             >
@@ -142,10 +142,10 @@ const ActivitySection = () => {
             </Button>
           </div>
           {/* Slide Right */}
-          <div className="absolute -right-2 top-1/2 -translate-y-1/2 z-10">
+          <div className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 ">
             <Button
               size="icon"
-              className="text-white cursor-pointer"
+              className="text-white cursor-pointer rounded-full"
               onClick={handleNext}
               disabled={isAtEnd}
             >
@@ -157,7 +157,7 @@ const ActivitySection = () => {
             <motion.div
               ref={trackRef}
               style={{ x }}
-              className="flex gap-5"
+              className="flex gap-2"
               drag="x"
               dragConstraints={{ left: maxTranslate, right: 0 }}
               dragElastic={0.04}
@@ -166,7 +166,7 @@ const ActivitySection = () => {
                 <div
                   key={it.id}
                   className="
-                    flex-shrink-0 basis-full md:basis-1/2 lg:basis-1/3
+                    flex-shrink-0 basis-full md:basis-2/3 lg:basis-1/3
                     min-w-0
                   "
                 >
@@ -182,28 +182,6 @@ const ActivitySection = () => {
             </motion.div>
           </div>
         </div>
-
-        {/* Footer tombol */}
-        {/* <div className="flex w-full mt-5 items-center justify-end">
-          <div className="flex items-center gap-4">
-            <Button
-              size="icon"
-              className="text-white"
-              onClick={handlePrev}
-              disabled={isAtStart}
-            >
-              <ArrowLeft />
-            </Button>
-            <Button
-              size="icon"
-              className="text-white"
-              onClick={handleNext}
-              disabled={isAtEnd}
-            >
-              <ArrowRight />
-            </Button>
-          </div>
-        </div> */}
 
         <div className="flex items-end mt-5 justify-end w-full">
           <Link

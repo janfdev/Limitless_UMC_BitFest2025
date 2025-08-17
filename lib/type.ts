@@ -8,6 +8,7 @@ export type BlogTypes = {
 };
 
 export type Prodi = {
+  id: string;
   name: string;
   label?: string;
 };

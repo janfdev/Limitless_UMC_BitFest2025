@@ -42,7 +42,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
               alt={partner.name}
               fill
               sizes="100px"
-              className="object-contain p-2 grayscale group-hover:grayscale-0 transition"
+              className="object-contain p-2"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-slate-600 dark:text-slate-300">

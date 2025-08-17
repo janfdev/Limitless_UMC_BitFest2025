@@ -21,7 +21,13 @@ export const activityItemVariants: Variants = {
   },
 };
 
-const ActivityList = ({ image, title, deskripsi, place, date }: ActivityListProps) => {
+const ActivityList = ({
+  image,
+  title,
+  deskripsi,
+  place,
+  date,
+}: ActivityListProps) => {
   return (
     <motion.article
       variants={activityItemVariants}
@@ -32,9 +38,9 @@ const ActivityList = ({ image, title, deskripsi, place, date }: ActivityListProp
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.995 }}
     >
-      <div className="p-3">
+      <div className="p-2">
         <motion.div
-          className="relative rounded-xl overflow-hidden"
+          className="relative overflow-hidden"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
@@ -44,8 +50,7 @@ const ActivityList = ({ image, title, deskripsi, place, date }: ActivityListProp
             width={500}
             height={500}
             quality={100}
-            className="w-full h-auto object-cover"
-            placeholder="blur"
+            className="w-full h-full object-cover rounded-lg"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
         </motion.div>
@@ -53,7 +58,9 @@ const ActivityList = ({ image, title, deskripsi, place, date }: ActivityListProp
         <div className="flex flex-col gap-3 mt-2">
           <div className="flex flex-col gap-1.5 px-2">
             <h3 className="font-semibold leading-snug">{title}</h3>
-            <h4 className="font-sm text-[13px] text-gray-500 leading-snug">{deskripsi}</h4>
+            <h4 className="font-sm text-[13px] text-gray-500 leading-snug">
+              {deskripsi}
+            </h4>
           </div>
 
           <div className="flex flex-col gap-2 text-sm">

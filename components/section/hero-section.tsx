@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full  ">
+    <section className="relative h-screen w-full">
       <Image
         src={Hero}
         alt="Hero Image"
