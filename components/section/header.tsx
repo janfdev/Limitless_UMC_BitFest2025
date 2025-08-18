@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -18,7 +18,25 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "Beranda", href: "/" },
-  { name: "Profil", href: "/profile" },
+  {
+    name: "Profil",
+    href: "/profile",
+    hasDropdown: true,
+    dropdownItems: [
+      {
+        name: "Sambutan Rektor",
+        href: "/about/sambutan-rektor",
+      },
+      {
+        name: "Visi, Misi dan Tujuan",
+        href: "/about/visi-misi",
+      },
+      {
+        name: "Sejarah",
+        href: "/about/sejarah",
+      },
+    ],
+  },
   {
     name: "Fakultas",
     href: "/fakultas",
@@ -38,7 +56,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { name: "Aktifitas", href: "/aktifitas" },
+  { name: "Aktifitas", href: "#activity" },
   { name: "Fasilitas", href: "/fasilitas" },
 ];
 
@@ -153,11 +171,14 @@ export default function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="hover:bg-yellow-500 group block px-4 py-2 transition-colors duration-200"
+                            className="hover:bg-yellow-500 border-b-1 group block px-4 py-2 transition-colors duration-200"
                           >
-                            <h2 className="text-white group-hover:text-white font-medium">
-                              {dropdownItem.name}
-                            </h2>
+                            <div className="flex items-center justify-between">
+                              <h2 className="text-white group-hover:text-white font-medium">
+                                {dropdownItem.name}
+                              </h2>
+                              <ChevronRight className="group-hover:translate-x-3 w-5 h-5 text-white transition-all duration-300" />
+                            </div>
                           </Link>
                         ))}
                       </motion.div>
@@ -250,12 +271,15 @@ export default function Header() {
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className="block md:p-3 p-2 text-sm transition-colors hover:bg-yellow-500 group"
+                                  className="block md:p-3 py-2 px-4 text-sm transition-colors hover:bg-yellow-500 group"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                  <h4 className="text-white ">
-                                    {dropdownItem.name}
-                                  </h4>
+                                  <div className="flex items-center justify-between">
+                                    <h4 className="text-white ">
+                                      {dropdownItem.name}
+                                    </h4>
+                                    <ChevronRight className="group-hover:translate-x-3 w-5 h-5 text-white transition-all duration-300" />
+                                  </div>
                                 </Link>
                               ))}
                             </motion.div>

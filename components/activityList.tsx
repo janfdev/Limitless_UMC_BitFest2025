@@ -1,15 +1,8 @@
 import { Calendar, MapPin } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { motion, type Variants } from "framer-motion";
-
-type ActivityListProps = {
-  image: string | StaticImageData;
-  title: string;
-  deskripsi: string;
-  place: string;
-  date: string;
-};
+import { ActivityListProps } from "@/lib/type";
 
 export const activityItemVariants: Variants = {
   hidden: { opacity: 0, y: 16, scale: 0.98 },
@@ -24,6 +17,7 @@ export const activityItemVariants: Variants = {
 const ActivityList = ({
   image,
   title,
+  label,
   deskripsi,
   place,
   date,
@@ -40,35 +34,37 @@ const ActivityList = ({
     >
       <div className="p-2">
         <motion.div
-          className="relative overflow-hidden"
+          className="relative w-full overflow-hidden rounded-lg aspect-[16/9] md:aspect-[4/3]"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Label Berita */}
-          <span className="absolute top-3 left-3 bg-blue-800 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-            Berita
-          </span>
+          {label && (
+            <span className="absolute top-3 left-3 bg-blue-800 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+              {label}
+            </span>
+          )}
 
           <Image
             src={image}
-            alt="Kegiatan"
-            width={500}
-            height={500}
-            quality={100}
-            className="w-full h-full object-cover rounded-lg"
+            alt={title || "Kegiatan"}
+            fill
+            className="object-cover"
+            sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
+            priority={false}
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
         </motion.div>
 
-        <div className="flex flex-col gap-3 mt-2">
+        <div className="flex flex-col gap-3 mt-3">
           <div className="flex flex-col gap-1.5 px-2">
-            <h3 className="font-semibold leading-snug">{title}</h3>
-            <h4 className="font-sm text-[13px] text-gray-500 leading-snug">
+            <h3 className="font-semibold leading-snug line-clamp-1">{title}</h3>
+            <p className="text-[13px] text-gray-500 leading-snug line-clamp-2">
               {deskripsi}
-            </h4>
+            </p>
           </div>
 
-          <div className="flex flex-col gap-2 text-sm">
+          <div className="flex flex-col gap-2 text-sm px-2 pb-2">
             <span className="flex items-center gap-2">
               <MapPin className="text-blue-600 w-5 h-5 shrink-0" />
               <p className="font-medium">{place}</p>

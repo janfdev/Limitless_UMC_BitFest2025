@@ -19,3 +19,13 @@ export type Partner = {
   url?: string;
   accentClass: string;
 };
+
+
+export type ActivityListProps = {
+  image: string | StaticImageData;
+  title: string;
+  label: string;
+  deskripsi: string;
+  place: string;
+  date: string;
+};

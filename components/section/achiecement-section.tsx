@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Student from "@/public/assets/prestasi-1.png";
+import Kristianto from "@/public/assets/prestasi-1.png";
 import Noni from "@/public/assets/prestasi-2.png";
 import Nopi from "@/public/assets/prestasi-3.png";
 
@@ -17,16 +17,16 @@ const AchievementSection = () => {
       image: Noni,
     },
     {
-      name: "Nopi",
+      name: "Nopi Fitrianingsih",
       major: "S1 Sistem Informasi Komputerisasi Akutansi",
-      desc: "Raih IPK terbaik jurusan S1 Sistem Informasi Komputerisasi Akutansi angkatan tahun 2016 dengan IPK 3,95",
+      desc: "Raih IPK terbaik jurusan S1 Sistem Informasi Komputer Akutansi angkatan tahun 2016 dengan IPK 3,95",
       image: Nopi,
     },
     {
-      name: "Putri",
+      name: "Kristianto",
       major: "S1 Teknik Informatika",
-      desc: "Berprestasi di bidang penelitian AI dan publikasi jurnal internasional.",
-      image: Student,
+      desc: "Raih IPK Terbaik dari jurusan Teknik Informatika Angkatan 2016 dengan IPK 4,00",
+      image: Kristianto,
     },
   ];
 
@@ -105,57 +105,57 @@ const AchievementSection = () => {
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-          {/* Progress dots */}
-          <div className="flex items-center gap-2">
-            {Array.from({ length: totalSteps }).map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Ke slide ${i + 1}`}
-                onClick={() => setStartIndex(i)}
-                className={[
-                  "h-2.5 rounded-full transition-all",
-                  i === startIndex
-                    ? "w-6 bg-blue-700"
-                    : "w-2.5 bg-blue-200 hover:bg-blue-300",
-                ].join(" ")}
-              />
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-slate-600">
-              {currentStep}/{totalSteps}
-            </span>
+        {/* Progress dots */}
+        <div className="flex items-center gap-2">
+          {Array.from({ length: totalSteps }).map((_, i) => (
             <button
-              onClick={prev}
-              disabled={startIndex === 0}
-              aria-label="Sebelumnya"
+              key={i}
+              aria-label={`Ke slide ${i + 1}`}
+              onClick={() => setStartIndex(i)}
               className={[
-                "inline-flex items-center justify-center rounded-full",
-                "h-10 w-10 md:h-11 md:w-11",
-                "bg-blue-800 text-white shadow hover:shadow-md",
-                "disabled:opacity-50 disabled:cursor-not-allowed",
-                "transition-transform active:scale-95",
+                "h-2.5 rounded-full transition-all",
+                i === startIndex
+                  ? "w-6 bg-blue-700"
+                  : "w-2.5 bg-blue-200 hover:bg-blue-300",
               ].join(" ")}
-            >
-              <ArrowLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={next}
-              disabled={startIndex + cardsPerPage >= cards.length}
-              aria-label="Berikutnya"
-              className={[
-                "inline-flex items-center justify-center rounded-full",
-                "h-10 w-10 md:h-11 md:w-11",
-                "bg-blue-800 text-white shadow hover:shadow-md",
-                "disabled:opacity-50 disabled:cursor-not-allowed",
-                "transition-transform active:scale-95",
-              ].join(" ")}
-            >
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </div>
+            />
+          ))}
         </div>
+
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-slate-600">
+            {currentStep}/{totalSteps}
+          </span>
+          <button
+            onClick={prev}
+            disabled={startIndex === 0}
+            aria-label="Sebelumnya"
+            className={[
+              "inline-flex items-center justify-center rounded-full",
+              "h-10 w-10 md:h-11 md:w-11",
+              "bg-blue-800 text-white shadow hover:shadow-md",
+              "disabled:opacity-50 disabled:cursor-not-allowed",
+              "transition-transform active:scale-95",
+            ].join(" ")}
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={next}
+            disabled={startIndex + cardsPerPage >= cards.length}
+            aria-label="Berikutnya"
+            className={[
+              "inline-flex items-center justify-center rounded-full",
+              "h-10 w-10 md:h-11 md:w-11",
+              "bg-blue-800 text-white shadow hover:shadow-md",
+              "disabled:opacity-50 disabled:cursor-not-allowed",
+              "transition-transform active:scale-95",
+            ].join(" ")}
+          >
+            <ArrowRight className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
     </section>
   );
 };

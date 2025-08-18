@@ -96,21 +96,6 @@ export default function Footer03() {
           </div>
         </div>
 
-        <div className="mt-10">
-          <div className="relative w-full overflow-hidden rounded-xl border border-border">
-            <div className="h-72 sm:h-80 lg:h-96">
-              <iframe
-                title="Lokasi UCIC di Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126793.44478942039!2d108.553246!3d-6.733801!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1d8ebc133e3f%3A0x91385801f5822049!2sUniversitas%20Catur%20Insan%20Cendekia%20(CIC)!5e0!3m2!1sid!2sid!4v1755447646676!5m2!1sid!2sid"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 h-full w-full border-0"
-              />
-            </div>
-          </div>
-        </div>
-
         {/* Bottom note */}
         <p className="mt-10 text-center text-sm text-muted-foreground">
           &copy; 2025. Universitas Catur Insan Cendekia. All rights reserved.

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description: siteDesc,
   icons: {
-    icon: "/logo.png",
+    icon: "/assets/UCIC.png",
   },
   keywords: [
     "Universitas Cirebon",

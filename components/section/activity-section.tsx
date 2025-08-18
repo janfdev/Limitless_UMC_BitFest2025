@@ -2,23 +2,13 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
-import Cover from "@/public/assets/program-studi-image.jpg";
 import ActivityList from "../activityList";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { activity } from "@/lib/data";
 
 const ActivitySection = () => {
-  const items = new Array(6).fill(0).map((_, i) => ({
-    id: i + 1,
-    image: Cover,
-    title: "Kegiatan Penggalangan Dana",
-    deskripsi:
-      "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
-    place: "Kampus UCIC",
-    date: "12 Juli 2025",
-  }));
-
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -68,12 +58,12 @@ const ActivitySection = () => {
       if (current !== clamped) x.set(clamped);
 
       // 5) Update ujung
-      const maxIndex = Math.max(0, items.length - vis);
+      const maxIndex = Math.max(0, activity.length - vis);
       const approxIndex = Math.round(Math.abs(clamped) / (stp || 1));
       const safeIndex = Math.min(maxIndex, Math.max(0, approxIndex));
       setIndex(safeIndex);
       setIsAtStart(clamped === 0);
-      setIsAtEnd(clamped === -max || items.length <= vis);
+      setIsAtEnd(clamped === -max || activity.length <= vis);
     };
 
     measure();
@@ -90,10 +80,10 @@ const ActivitySection = () => {
       ro.disconnect();
       window.removeEventListener("resize", onResize);
     };
-  }, [x, items.length]);
+  }, [x, activity.length]);
 
   const snapTo = (nextIndex: number) => {
-    const maxIndex = Math.max(0, items.length - visibleCount);
+    const maxIndex = Math.max(0, activity.length - visibleCount);
     const safeIndex = Math.min(maxIndex, Math.max(0, nextIndex));
     const target = -(safeIndex * step);
     const clamped = Math.min(0, Math.max(maxTranslate, target));
@@ -110,21 +100,23 @@ const ActivitySection = () => {
   // Sinkronkan state ujung saat x berubah (drag)
   useEffect(() => {
     const unsub = x.on("change", (val) => {
-      const maxIndex = Math.max(0, items.length - visibleCount);
+      const maxIndex = Math.max(0, activity.length - visibleCount);
       const approxIndex = Math.round(Math.abs(val) / (step || 1));
       setIndex(Math.min(maxIndex, approxIndex));
       setIsAtStart(val === 0);
-      setIsAtEnd(val === maxTranslate || items.length <= visibleCount);
+      setIsAtEnd(val === maxTranslate || activity.length <= visibleCount);
     });
     return () => unsub();
-  }, [x, step, maxTranslate, visibleCount, items.length]);
+  }, [x, step, maxTranslate, visibleCount, activity.length]);
 
   return (
-    <section className="bg-muted px-4 md:px-10 mt-5 py-15 pb-18">
+    <section className="bg-muted px-4 md:px-10 mt-5 py-15 pb-18" id="activity">
       <div className="mx-auto md:max-w-7xl w-auto">
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center group">
-            <h1 className="font-semibold text-blue-600 py-1">Berita & Kegiatan</h1>
+            <h1 className="font-semibold text-blue-600 py-1">
+              Berita & Kegiatan
+            </h1>
             <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
           </div>
         </div>
@@ -162,7 +154,7 @@ const ActivitySection = () => {
               dragConstraints={{ left: maxTranslate, right: 0 }}
               dragElastic={0.04}
             >
-              {items.map((it) => (
+              {activity.map((it) => (
                 <div
                   key={it.id}
                   className="
@@ -173,6 +165,7 @@ const ActivitySection = () => {
                   <ActivityList
                     image={it.image}
                     title={it.title}
+                    label={it.label}
                     deskripsi={it.deskripsi}
                     place={it.place}
                     date={it.date}

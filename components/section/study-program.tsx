@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
-import Cover from "@/public/assets/program-studi-image.jpg";
+import Gedung from "@/public/assets/Gedung UCIC (1).jpeg";
 import { Cpu, BriefcaseBusiness, BookCheck, GraduationCap } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
@@ -83,11 +83,12 @@ const StudyProgram = () => {
         <div className="flex lg:flex-row md:flex-col flex-col mt-5">
           <div className="flex items-center justify-center w-full h-full px-5">
             <Image
-              src={Cover}
+              src={Gedung}
               alt="Image Program Studi"
               quality={100}
               width={500}
-              className="rounded-4xl h-full bg-cover"
+              height={500}
+              className="rounded-4xl bg-contain h-[400px]"
               priority
             />
           </div>
