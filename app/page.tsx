@@ -21,7 +21,7 @@ export default function Home() {
       <ActivitySection />
       <FacilitySection />
       <AchievementSection />
-      <AchievementSection2 />
+      {/* <AchievementSection2 /> */}
       <PartnershipSection
         cta={{ label: "Jadi Mitra", href: "/kerjasama" }}
         partners={partners}

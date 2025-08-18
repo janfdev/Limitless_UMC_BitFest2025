@@ -44,6 +44,11 @@ const ActivityList = ({
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
+          {/* Label Berita */}
+          <span className="absolute top-3 left-3 bg-blue-800 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+            Berita
+          </span>
+
           <Image
             src={image}
             alt="Kegiatan"

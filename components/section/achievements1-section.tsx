@@ -124,7 +124,7 @@ const AchievementSection2 = () => {
                     "transition-transform",
                   ].join(" ")}
                 >
-                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-yellow-400" />
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-yellow-400" />
 
                   <div className="flex items-center gap-4 md:gap-5">
                     <div className="relative shrink-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50 to-yellow-50 ring-1 ring-black/5 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 overflow-hidden">
