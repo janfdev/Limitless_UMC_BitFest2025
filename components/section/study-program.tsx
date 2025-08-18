@@ -88,7 +88,7 @@ const StudyProgram = () => {
               quality={100}
               width={500}
               height={500}
-              className="rounded-4xl bg-contain h-[400px]"
+              className="rounded-4xl bg-contain h-[300px] lg:h-[400px]"
               priority
             />
           </div>
