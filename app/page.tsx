@@ -12,7 +12,7 @@ import { partners } from "@/lib/data";
 
 export default function Home() {
   return (
-    <main className="mx-auto">
+    <main className="mx-auto overflow-x-hidden">
       <Header />
       <HeroSection />
       <StatsSection />

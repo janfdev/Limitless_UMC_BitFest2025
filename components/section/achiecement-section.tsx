@@ -65,7 +65,7 @@ const AchievementSection = () => {
     <section className="container max-w-6xl mx-auto p-10">
       <div className="flex flex-col text-2xl lg:text-3xl items-center justify-center group py-10">
         <h1 className="font-semibold text-blue-600">Mahasiswa Berprestasi</h1>
-        <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
+        <span className="w-16 h-1 rounded-lg bg-secondary"></span>
       </div>
 
       {/* Card wrapper */}
@@ -92,7 +92,7 @@ const AchievementSection = () => {
               </div>
               <div className="mt-5 ml-32">
                 <h3 className="text-blue-800 font-bold text-lg">{card.name}</h3>
-                <p className="text-yellow-500 font-semibold text-[10px] lg:text-sm mb-3">
+                <p className="text-yellow-light font-semibold text-[10px] lg:text-sm mb-3">
                   {card.major}
                 </p>
                 <p className="text-gray-700 text-[10px] lg:text-sm">

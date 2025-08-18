@@ -171,7 +171,7 @@ export default function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="hover:bg-yellow-500 border-b-1 group block px-4 py-2 transition-colors duration-200"
+                            className="hover:bg-yellow-light border-b-1 group block px-4 py-2 transition-colors duration-200"
                           >
                             <div className="flex items-center justify-between">
                               <h2 className="text-white group-hover:text-white font-medium">
@@ -271,7 +271,7 @@ export default function Header() {
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className="block md:p-3 py-2 px-4 text-sm transition-colors hover:bg-yellow-500 group"
+                                  className="block md:p-3 py-2 px-4 text-sm transition-colors hover:bg-yellow-light group"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   <div className="flex items-center justify-between">

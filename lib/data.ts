@@ -5,8 +5,8 @@ import YH from "@/public/assets/yh.png";
 import EF from "@/public/assets/ef.png";
 import ESDA from "@/public/assets/esda.png";
 import Cover from "@/public/assets/Berita1.png";
-import Berita2 from "@/public/assets/berita2.jpg"
-import Berita3 from "@/public/assets/berita3.png"
+import Berita2 from "@/public/assets/berita2.jpg";
+import Berita3 from "@/public/assets/berita3.png";
 import Kegiatan from "@/public/assets/kegiatan1.jpg";
 import Kewirausahaan2 from "@/public/assets/Lab Kewirausahaan (1).jpeg";
 import KegiatanHima from "@/public/assets/kegiatan-2.jpg";
@@ -26,7 +26,8 @@ export const activity = [
     id: 2,
     image: Kegiatan,
     label: "Kegiatan",
-    title: "FTI UCIC Lakukan Benchmarking Kurikulum ke FSI UNJANI: Sinergi Menuju Kurikulum Adaptif dan Kolaboratif",
+    title:
+      "FTI UCIC Lakukan Benchmarking Kurikulum ke FSI UNJANI: Sinergi Menuju Kurikulum Adaptif dan Kolaboratif",
     deskripsi:
       "Dalam rangka meningkatkan kualitas pembelajaran dan kesesuaian kurikulum dengan kebutuhan dunia industri dan perkembangan teknologi, Fakultas Teknologi dan Informatika Universitas Catur Insan Cendekia (FTI UCIC) melaksanakan kegiatan Benchmarking Kurikulum ke Fakultas Sains dan Informatika Universitas Jenderal Achmad Yani (FSI UNJANI), Bandung.",
     place: "Lab Kewirausaahaan UCIC",
@@ -36,7 +37,8 @@ export const activity = [
     id: 3,
     image: Berita2,
     label: "Berita",
-    title: "Program Studi Sistem Informasi UCIC Raih Akreditasi “Baik Sekali” dari LAM INFOKOM",
+    title:
+      "Program Studi Sistem Informasi UCIC Raih Akreditasi “Baik Sekali” dari LAM INFOKOM",
     deskripsi:
       "Cirebon, 9 April 2025 - Kabar menggembirakan datang dari Program Studi Sistem Informasi Universitas Catur Insan Cendekia (UCIC). Berdasarkan Keputusan LAM INFOKOM No. 077/SK/LAM-INFOKOM/Ak/S/IV/2025, program studi ini resmi meraih peringkat Akreditasi Baik Sekali.",
     place: "Kampus UCIC",
@@ -133,7 +135,7 @@ export const partners: Partner[] = [
     name: "Yayasan Harapanku",
     logoSrc: "/assets/yh.png",
     url: "https://yayasanharapanku.com",
-    accentClass: "bg-yellow-500/50",
+    accentClass: "bg-yellow-light/50",
   },
   {
     name: "English First",

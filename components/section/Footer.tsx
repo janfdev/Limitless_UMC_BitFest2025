@@ -7,24 +7,41 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t mt-16">
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
-        
         {/* Logo + Kontak */}
         <div>
-          <Image src={Logo} alt="UCIC Logo" width={90} height={90} className="mb-4" />
+          <Image
+            src={Logo}
+            alt="UCIC Logo"
+            width={90}
+            height={90}
+            className="mb-4"
+          />
           <p className="text-gray-700 text-sm">Telp: (0231) 220250</p>
           <p className="text-gray-700 text-sm">Email: info@ucic.ac.id</p>
 
           <div className="flex gap-4 mt-4">
-            <a href="#" className="p-2 bg-white rounded-full shadow hover:bg-blue-50">
+            <a
+              href="https://www.instagram.com/universitas_cic"
+              className="p-2 bg-white rounded-full shadow hover:bg-blue-50"
+            >
               <Instagram className="w-5 h-5 text-pink-500" />
             </a>
-            <a href="#" className="p-2 bg-white rounded-full shadow hover:bg-blue-50">
+            <a
+              href="#"
+              className="p-2 bg-white rounded-full shadow hover:bg-blue-50"
+            >
               <Youtube className="w-5 h-5 text-red-500" />
             </a>
-            <a href="#" className="p-2 bg-white rounded-full shadow hover:bg-blue-50">
+            <a
+              href="#"
+              className="p-2 bg-white rounded-full shadow hover:bg-blue-50"
+            >
               <Twitter className="w-5 h-5 text-sky-500" />
             </a>
-            <a href="#" className="p-2 bg-white rounded-full shadow hover:bg-blue-50">
+            <a
+              href="#"
+              className="p-2 bg-white rounded-full shadow hover:bg-blue-50"
+            >
               <Facebook className="w-5 h-5 text-blue-600" />
             </a>
           </div>
@@ -54,8 +71,11 @@ const Footer = () => {
           <h3 className="font-semibold text-gray-900 mb-3">Aplikasi Kampus</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
-                Sistem Akademik Mahasiswa
+              <a
+                href="https://pmb.cic.ac.id/"
+                className="hover:text-blue-600 transition"
+              >
+                PMB UCIC
               </a>
             </li>
             <li>
@@ -64,7 +84,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
+              <a
+                href="https://pustaka.cic.ac.id/"
+                className="hover:text-blue-600 transition"
+              >
                 Perpustakaan
               </a>
             </li>
@@ -76,16 +99,27 @@ const Footer = () => {
           <h3 className="font-semibold text-gray-900 mb-3">Sosial Media</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li>
-              <a href="#" className="hover:text-blue-600 transition">Instagram</a>
+              <a
+                href="https://www.instagram.com/universitas_cic"
+                className="hover:text-blue-600 transition"
+              >
+                Instagram
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">YouTube</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                YouTube
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">Twitter</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Twitter
+              </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">Facebook</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Facebook
+              </a>
             </li>
           </ul>
         </div>

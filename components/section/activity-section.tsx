@@ -117,13 +117,13 @@ const ActivitySection = () => {
             <h1 className="font-semibold text-blue-600 py-1">
               Berita & Kegiatan
             </h1>
-            <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
+            <span className="w-16 h-1 rounded-lg bg-secondary"></span>
           </div>
         </div>
 
         <div className="relative mt-5">
           {/* Slide Left */}
-          <div className="absolute -left-2 top-1/2 -translate-y-1/2 z-10">
+          <div className="absolute md:-left-10 -left-2 top-1/2 -translate-y-1/2 z-10">
             <Button
               size={"icon"}
               className="text-white cursor-pointer rounded-full "
@@ -134,7 +134,7 @@ const ActivitySection = () => {
             </Button>
           </div>
           {/* Slide Right */}
-          <div className="absolute -right-2 top-1/2 -translate-y-1/2 z-10 ">
+          <div className="absolute md:-right-10 -right-2 top-1/2 -translate-y-1/2 z-10 ">
             <Button
               size="icon"
               className="text-white cursor-pointer rounded-full"
@@ -145,7 +145,7 @@ const ActivitySection = () => {
             </Button>{" "}
           </div>
           {/* Container  */}
-          <div ref={containerRef} className="overflow-hidden py-5">
+          <div ref={containerRef} className="overflow-x-hidden py-5">
             <motion.div
               ref={trackRef}
               style={{ x }}
@@ -158,7 +158,7 @@ const ActivitySection = () => {
                 <div
                   key={it.id}
                   className="
-                    flex-shrink-0 basis-full md:basis-2/3 lg:basis-1/3
+                    flex-shrink-0 basis-full md:basis-1/2 lg:basis-1/3
                     min-w-0
                   "
                 >
@@ -183,7 +183,7 @@ const ActivitySection = () => {
           >
             <span
               aria-hidden
-              className="absolute inset-0 z-0 rounded-md bg-yellow-400
+              className="absolute inset-0 z-0 rounded-md bg-secondary
                 -rotate-5 translate-x-0 translate-y- scale-[1.05]
                 shadow-md transform-gpu
                 transition-transform duration-300 ease-out
@@ -195,7 +195,7 @@ const ActivitySection = () => {
               className="relative z-10 bg-blue-700 text-white rounded-md
                 px-6 py-3 font-semibold shadow-md
                  hover:bg-blue-700  /* biar warna biru tetap, fokus ke animasi kuning */
-                focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
+                focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
             >
               Selengkapnya
             </Button>

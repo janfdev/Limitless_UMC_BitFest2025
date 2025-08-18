@@ -28,13 +28,13 @@ const ActivityList = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="w-full bg-white rounded-lg shadow-sm ring-1 ring-black/5 overflow-hidden"
+      className="w-auto h-full rounded-lg shadow-sm ring-1 ring-black/5 overflow-hidden bg-white"
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.995 }}
     >
       <div className="p-2">
         <motion.div
-          className="relative w-full overflow-hidden rounded-lg aspect-[16/9] md:aspect-[4/3]"
+          className="relative overflow-hidden rounded-lg aspect-[1/1] md:aspect-[5/4] lg:aspect-[4/3]"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
@@ -53,7 +53,6 @@ const ActivityList = ({
             sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
             priority={false}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
         </motion.div>
 
         <div className="flex flex-col gap-3 mt-3">

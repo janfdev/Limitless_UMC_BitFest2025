@@ -75,20 +75,20 @@ const StudyProgram = () => {
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-semibold text-blue-600 pb-1">Program Studi</h1>
-            <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
+            <span className="w-16 h-1 rounded-lg bg-secondary"></span>
           </div>
         </div>
 
         {/* Content */}
         <div className="flex lg:flex-row md:flex-col flex-col mt-5">
-          <div className="flex items-center justify-center w-full h-full px-5">
+          <div className="flex items-center justify-center w-full h-full md:px-5 px-10">
             <Image
               src={Gedung}
               alt="Image Program Studi"
               quality={100}
               width={500}
               height={500}
-              className="rounded-4xl bg-contain h-[300px] lg:h-[400px]"
+              className="rounded-4xl bg-cover h-[300px] lg:h-[400px]"
               priority
             />
           </div>
@@ -152,7 +152,7 @@ const StudyProgram = () => {
                 <DialogTitle className="flex items-center gap-2">
                   {selected.name}
                   {selected.label && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-yellow-400 text-black font-semibold">
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-black font-semibold">
                       {selected.label}
                     </span>
                   )}
