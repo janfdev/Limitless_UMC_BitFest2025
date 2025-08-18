@@ -110,7 +110,7 @@ export const FEB: Prodi[] = [
   { id: "bi", name: "S1-Bisnis Digital", label: "New" },
   { id: "mn", name: "S1-Manajemen" },
   { id: "ak", name: "S1-Akuntansi" },
-  { id: "mnKRM", name: "S1-Manajemen KRM (Kelas Karyawan)" },
+  { id: "mnKRM", name: "S1-Manajemen (Karyawan)" },
   { id: "mb", name: "D3-Manajemen Bisnis" },
 ];
 

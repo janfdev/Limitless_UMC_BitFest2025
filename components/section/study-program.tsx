@@ -20,6 +20,49 @@ import { parseProdiName } from "@/lib/helpers";
 import { Prodi } from "@/lib/type";
 import { TI, FEB, PS } from "@/lib/data";
 
+// --- NEW: framer-motion (animasi ringan & reusable)
+import { motion, type Variants } from "framer-motion";
+
+// Variants umum
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.4 } },
+};
+
+const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.98 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const listStagger: Variants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.05, delayChildren: 0.05 },
+  },
+};
+
+const itemLift: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 function ProdiList({
   items,
   onSelect,
@@ -28,25 +71,40 @@ function ProdiList({
   onSelect: (p: Prodi) => void;
 }) {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-5 ">
+    // ganti ke motion.div agar bisa pakai stagger; struktur grid tetap sama
+    <motion.div
+      className="grid md:grid-cols-2 grid-cols-1 gap-5"
+      variants={listStagger}
+      initial="hidden"
+      animate="show"
+    >
       {items.map((p) => (
-        <button
+        // ganti ke motion.button utk micro-interaction (hover/tap) + animasi masuk
+        <motion.button
           onClick={() => onSelect(p)}
           key={p.id}
+          variants={itemLift}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.2 }}
           className="flex items-center gap-2 rounded-lg hover:bg-blue-100 p-2 cursor-pointer"
         >
-          <div className="bg-blue-700 p-2 rounded-full">
+          <motion.div
+            className="bg-blue-700 p-2 rounded-full"
+            whileHover={{ rotate: 3 }}
+            transition={{ type: "spring", stiffness: 250, damping: 15 }}
+          >
             <GraduationCap className="text-white" />
-          </div>
-          <p>{p.name}</p>
+          </motion.div>
+          <h2 className="text-sm">{p.name}</h2>
           {p.label && (
             <span className="w-fit text-xs px-2 border-2 border-green-500 text-green-700 rounded-full">
               {p.label}
             </span>
           )}
-        </button>
+        </motion.button>
       ))}
-    </div>
+    </motion.div>
   );
 }
 
@@ -72,16 +130,32 @@ const StudyProgram = () => {
   return (
     <>
       <section className="mx-auto max-w-7xl mt-5 py-10">
-        <div className="flex items-center justify-center gap-2 text-2xl">
+        {/* Heading */}
+        <motion.div
+          className="flex items-center justify-center gap-2 text-2xl"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-semibold text-blue-600 pb-1">Program Studi</h1>
             <span className="w-16 h-1 rounded-lg bg-secondary"></span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Content */}
         <div className="flex lg:flex-row md:flex-col flex-col mt-5">
-          <div className="flex items-center justify-center w-full h-full md:px-5 px-10">
+          {/* Image */}
+          <motion.div
+            className="flex items-center justify-center w-full h-full md:px-5 px-10"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          >
             <Image
               src={Gedung}
               alt="Image Program Studi"
@@ -91,9 +165,16 @@ const StudyProgram = () => {
               className="rounded-4xl bg-cover h-[300px] lg:h-[400px]"
               priority
             />
-          </div>
+          </motion.div>
 
-          <div className="px-10 mt-5 w-full">
+          {/* Right column */}
+          <motion.div
+            className="px-10 mt-5 w-full"
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div>
               <h2 className="text-lg font-semibold">Daftar Program Studi</h2>
               <p>
@@ -102,52 +183,76 @@ const StudyProgram = () => {
               </p>
             </div>
 
+            {/* Tabs */}
             <Tabs defaultValue="ti" className="w-full mt-5">
-              <TabsList>
-                <TabsTrigger value="ti" className="flex items-center gap-2">
-                  <Cpu className="w-4 h-4" />
-                  <p className="md:block hidden">
-                    Fakultas Teknologi dan Informasi
-                  </p>
-                  <p className="md:hidden block">FTI</p>
-                </TabsTrigger>
+              <TabsList asChild>
+                {/* gunakan motion.div tanpa mengubah isi trigger */}
+                <motion.div
+                  variants={scaleIn}
+                  initial="hidden"
+                  animate="show"
+                  className="inline-flex"
+                >
+                  <TabsTrigger value="ti" className="flex items-center gap-2">
+                    <Cpu className="w-4 h-4" />
+                    <p className="md:block hidden">
+                      Fakultas Teknologi dan Informasi
+                    </p>
+                    <p className="md:hidden block">FTI</p>
+                  </TabsTrigger>
 
-                <TabsTrigger value="feb" className="flex items-center gap-2">
-                  <BriefcaseBusiness className="w-4 h-4" />
-                  <p className="md:block hidden">Fakultas Ekonomi dan Bisnis</p>
-                  <p className="md:hidden block">FEB</p>
-                </TabsTrigger>
+                  <TabsTrigger value="feb" className="flex items-center gap-2">
+                    <BriefcaseBusiness className="w-4 h-4" />
+                    <p className="md:block hidden">
+                      Fakultas Ekonomi dan Bisnis
+                    </p>
+                    <p className="md:hidden block">FEB</p>
+                  </TabsTrigger>
 
-                <TabsTrigger value="ps" className="flex items-center gap-2">
-                  <BookCheck className="w-4 h-4" />
-                  <p className="md:block hidden">
-                    Fakultas Pendidikan dan Sains
-                  </p>
-                  <p className="md:hidden block">FPS</p>
-                </TabsTrigger>
+                  <TabsTrigger value="ps" className="flex items-center gap-2">
+                    <BookCheck className="w-4 h-4" />
+                    <p className="md:block hidden">
+                      Fakultas Pendidikan dan Sains
+                    </p>
+                    <p className="md:hidden block">FPS</p>
+                  </TabsTrigger>
+                </motion.div>
               </TabsList>
 
+              {/* Konten tiap tab: bungkus ProdiList agar bisa fadeUp ringan */}
               <TabsContent value="ti" className="mt-5">
-                <ProdiList items={TI} onSelect={openDialog} />
+                <motion.div variants={fadeUp} initial="hidden" animate="show">
+                  <ProdiList items={TI} onSelect={openDialog} />
+                </motion.div>
               </TabsContent>
 
               <TabsContent value="feb" className="mt-5">
-                <ProdiList items={FEB} onSelect={openDialog} />
+                <motion.div variants={fadeUp} initial="hidden" animate="show">
+                  <ProdiList items={FEB} onSelect={openDialog} />
+                </motion.div>
               </TabsContent>
 
               <TabsContent value="ps" className="mt-5">
-                <ProdiList items={PS} onSelect={openDialog} />
+                <motion.div variants={fadeUp} initial="hidden" animate="show">
+                  <ProdiList items={PS} onSelect={openDialog} />
+                </motion.div>
               </TabsContent>
             </Tabs>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Dialog */}
       <Dialog open={open} onOpenChange={setOpen}>
+        {/* shadcn sudah punya animasi sendiri; tambahkan fade ringan untuk isi */}
         <DialogContent className="sm:max-w-lg">
           {selected && detail && (
-            <>
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              animate="show"
+              className="contents"
+            >
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2">
                   {selected.name}
@@ -163,7 +268,12 @@ const StudyProgram = () => {
               </DialogHeader>
 
               {/* “Card” isi ringkas */}
-              <div className="rounded-xl border p-4 bg-muted/40">
+              <motion.div
+                className="rounded-xl border p-4 bg-muted/40"
+                variants={scaleIn}
+                initial="hidden"
+                animate="show"
+              >
                 <dl className="grid grid-cols-2 gap-3 text-sm">
                   <div>
                     <dt className="text-muted-foreground">Jenjang</dt>
@@ -187,7 +297,7 @@ const StudyProgram = () => {
                   *Informasi detail kurikulum, prospek, dan akreditasi tersedia
                   di halaman program studi.
                 </p>
-              </div>
+              </motion.div>
 
               <DialogFooter className="gap-2 sm:gap-0">
                 <DialogClose asChild>
@@ -197,7 +307,7 @@ const StudyProgram = () => {
                   <Link href={`/prodi/${selected.id}`}>Lihat selengkapnya</Link>
                 </Button>
               </DialogFooter>
-            </>
+            </motion.div>
           )}
         </DialogContent>
       </Dialog>

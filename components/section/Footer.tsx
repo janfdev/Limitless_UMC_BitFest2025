@@ -79,7 +79,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
+              <a
+                href="https://simantu.cic.ac.id/"
+                className="hover:text-blue-600 transition"
+              >
                 Sistem Manajemen Mutu
               </a>
             </li>
