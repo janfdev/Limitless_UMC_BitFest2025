@@ -80,7 +80,7 @@ const ActivitySection = () => {
       ro.disconnect();
       window.removeEventListener("resize", onResize);
     };
-  }, [x, activity.length]);
+  }, [x]);
 
   const snapTo = (nextIndex: number) => {
     const maxIndex = Math.max(0, activity.length - visibleCount);
@@ -107,7 +107,7 @@ const ActivitySection = () => {
       setIsAtEnd(val === maxTranslate || activity.length <= visibleCount);
     });
     return () => unsub();
-  }, [x, step, maxTranslate, visibleCount, activity.length]);
+  }, [x, step, maxTranslate, visibleCount]);
 
   return (
     <section className="bg-muted px-4 md:px-10 mt-5 py-15 pb-18" id="activity">
