@@ -71,10 +71,10 @@ const StudyProgram = () => {
 
   return (
     <>
-      <section className="mx-auto max-w-7xl mt-5">
+      <section className="mx-auto max-w-7xl mt-5 py-10">
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="font-semibold text-blue-600">Program Studi</h1>
+            <h1 className="font-semibold text-blue-600 pb-1">Program Studi</h1>
             <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
           </div>
         </div>

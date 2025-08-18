@@ -120,11 +120,11 @@ const ActivitySection = () => {
   }, [x, step, maxTranslate, visibleCount, items.length]);
 
   return (
-    <section className="bg-muted px-4 md:px-10 mt-5 py-20">
+    <section className="bg-muted px-4 md:px-10 mt-5 py-15 pb-18">
       <div className="mx-auto md:max-w-7xl w-auto">
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center group">
-            <h1 className="font-semibold text-blue-600">Berita & Kegiatan</h1>
+            <h1 className="font-semibold text-blue-600 py-1">Berita & Kegiatan</h1>
             <span className="w-16 h-1 rounded-lg bg-yellow-400"></span>
           </div>
         </div>
@@ -153,7 +153,7 @@ const ActivitySection = () => {
             </Button>{" "}
           </div>
           {/* Container  */}
-          <div ref={containerRef} className="overflow-hidden">
+          <div ref={containerRef} className="overflow-hidden py-5">
             <motion.div
               ref={trackRef}
               style={{ x }}
@@ -183,7 +183,7 @@ const ActivitySection = () => {
           </div>
         </div>
 
-        <div className="flex items-end mt-5 justify-end w-full">
+        <div className="flex items-end mt-5 justify-end w-full px-5 pt-5">
           <Link
             href="/selengkapnya"
             className="group relative inline-block isolate"
@@ -191,18 +191,18 @@ const ActivitySection = () => {
             <span
               aria-hidden
               className="absolute inset-0 z-0 rounded-md bg-yellow-400
-                 -rotate-6 translate-x-1.5 translate-y-1.5 scale-[1.06]
-                 shadow-md transform-gpu
-                 transition-transform duration-300 ease-out
-                 group-hover:rotate-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100
-                 group-hover:shadow-none
-                 [will-change:transform]"
+                -rotate-5 translate-x-0 translate-y- scale-[1.05]
+                shadow-md transform-gpu
+                transition-transform duration-300 ease-out
+                group-hover:rotate-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100
+                group-hover:shadow-none
+                [will-change:transform]"
             />
             <Button
               className="relative z-10 bg-blue-700 text-white rounded-md
-                 px-6 py-3 font-semibold shadow-md
+                px-6 py-3 font-semibold shadow-md
                  hover:bg-blue-700  /* biar warna biru tetap, fokus ke animasi kuning */
-                 focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
+                focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
             >
               Selengkapnya
             </Button>

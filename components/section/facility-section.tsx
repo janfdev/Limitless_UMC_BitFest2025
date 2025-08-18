@@ -75,7 +75,7 @@ export default function FacilitySection() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-tr from-blue-50/70 via-transparent to-transparent" />
 
         {/* Title */}
-        <section className="py-5 container mx-auto">
+        <section className="py-10 container mx-auto">
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -85,14 +85,14 @@ export default function FacilitySection() {
           >
             <motion.h2
               variants={itemVariants}
-              className="xl:text-6xl/none text-3xl text-white font-bold sm:text-5xl tracking-tight"
+              className="xl:text-5xl/none text-3xl text-white font-bold sm:text-5xl tracking-tight"
             >
               Fasilitas Lengkap &amp; Modern
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-accent/90 max-w-3xl mx-auto"
+              className="text-lg md:text-lg text-accent/90 max-w-3xl mx-auto"
             >
               Nikmati lingkungan belajar yang nyaman: ruang kelas representatif,
               lab siap praktik, hingga pusat kegiatan mahasiswa untuk tumbuh dan
