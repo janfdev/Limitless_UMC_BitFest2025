@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend_Deca } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop"; // ⬅️ import tombol scroll
 
 const lexendDeca = Lexend_Deca({
   variable: "--font-lexend_deca",
@@ -64,7 +65,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${lexendDeca.className}`}>
-      <body className={`${lexendDeca.variable} antialiased`}>{children}</body>
+      <body className={`${lexendDeca.variable} antialiased`}>
+        {children}
+        <ScrollToTop /> {/* ⬅️ tombol scroll ditaruh di sini */}
+      </body>
     </html>
   );
 }

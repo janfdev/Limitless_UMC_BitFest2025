@@ -92,7 +92,7 @@ export default function FacilitySection() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-lg text-accent/90 max-w-3xl mx-auto"
+              className="text-sm md:text-lg text-accent/90 max-w-3xl mx-auto"
             >
               Nikmati lingkungan belajar yang nyaman: ruang kelas representatif,
               lab siap praktik, hingga pusat kegiatan mahasiswa untuk tumbuh dan
@@ -125,7 +125,7 @@ export default function FacilitySection() {
                 alt={item.title}
                 width={480}
                 height={180}
-                className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="w-full h-[150px] lg:h-[200px] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 placeholder="blur"
                 priority={idx < 2 && page === 1}
               />

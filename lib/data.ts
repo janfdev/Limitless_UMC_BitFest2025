@@ -4,8 +4,10 @@ import PB from "@/public/assets/pb.jpg";
 import YH from "@/public/assets/yh.png";
 import EF from "@/public/assets/ef.png";
 import ESDA from "@/public/assets/esda.png";
-import Cover from "@/public/assets/program-studi-image.jpg";
-import Kewirausahaan from "@/public/assets/Lab Kewirausahaan (2).jpeg";
+import Cover from "@/public/assets/Berita1.png";
+import Berita2 from "@/public/assets/berita2.jpg"
+import Berita3 from "@/public/assets/berita3.png"
+import Kegiatan from "@/public/assets/kegiatan1.jpg";
 import Kewirausahaan2 from "@/public/assets/Lab Kewirausahaan (1).jpeg";
 import KegiatanHima from "@/public/assets/kegiatan-2.jpg";
 
@@ -14,29 +16,29 @@ export const activity = [
     id: 1,
     image: Cover,
     label: "Berita",
-    title: "Kegiatan Penggalangan Dana",
+    title: "EMOVICS 2025 Wadah Kreativitas Mahasiswa CIC dalam Membuat Film",
     deskripsi:
-      "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
+      "Acara EMOVICS 2025 yang sangat dinantikan telah berhasil menampilkan serangkaian film pendek luar biasa karya mahasiswa dari Universitas Catur Insan Cendekia (UCIC). ",
     place: "Kampus UCIC",
     date: "12 Juli 2025",
   },
   {
     id: 2,
-    image: Kewirausahaan,
+    image: Kegiatan,
     label: "Kegiatan",
-    title: "Kegiatan Pengarahan Tentang Kewirausahaan",
+    title: "FTI UCIC Lakukan Benchmarking Kurikulum ke FSI UNJANI: Sinergi Menuju Kurikulum Adaptif dan Kolaboratif",
     deskripsi:
-      "Sesi pengarahan bagi mahasiswa yang tertarik membangun usaha. Materi mencakup mindset wirausaha, cara menemukan masalah dan merumuskan solusi, validasi ide dan riset pasar awal, penyusunan Business Model Canvas, strategi pemasaran digital dasar, pengelolaan keuangan sederhana, hingga persiapan perizinan. Peserta melakukan simulasi pitching singkat dan mendapatkan coaching 1:1 untuk menyusun rencana aksi 30 hari. Kegiatan dipandu oleh dosen pembina kewirausahaan bersama praktisi UMKM lokal, dengan tindak lanjut menuju program inkubasi kampus.",
+      "Dalam rangka meningkatkan kualitas pembelajaran dan kesesuaian kurikulum dengan kebutuhan dunia industri dan perkembangan teknologi, Fakultas Teknologi dan Informatika Universitas Catur Insan Cendekia (FTI UCIC) melaksanakan kegiatan Benchmarking Kurikulum ke Fakultas Sains dan Informatika Universitas Jenderal Achmad Yani (FSI UNJANI), Bandung.",
     place: "Lab Kewirausaahaan UCIC",
     date: "12 Agustus 2025",
   },
   {
     id: 3,
-    image: Cover,
+    image: Berita2,
     label: "Berita",
-    title: "Kegiatan Penggalangan Dana",
+    title: "Program Studi Sistem Informasi UCIC Raih Akreditasi “Baik Sekali” dari LAM INFOKOM",
     deskripsi:
-      "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
+      "Cirebon, 9 April 2025 - Kabar menggembirakan datang dari Program Studi Sistem Informasi Universitas Catur Insan Cendekia (UCIC). Berdasarkan Keputusan LAM INFOKOM No. 077/SK/LAM-INFOKOM/Ak/S/IV/2025, program studi ini resmi meraih peringkat Akreditasi Baik Sekali.",
     place: "Kampus UCIC",
     date: "12 Juli 2025",
   },
@@ -52,11 +54,11 @@ export const activity = [
   },
   {
     id: 5,
-    image: Cover,
+    image: Berita3,
     label: "Berita",
-    title: "Kegiatan Penggalangan Dana",
+    title: "Call For Paper 4th Internasional Conference ICCIT 2025",
     deskripsi:
-      "Kami mengadakan penggalangan dana untuk membantu saudara-saudara kita yang terkena bencana banjir di Sumber",
+      "Kesempatan untuk bersinar dalam sorotan akademis global! Sajikan penelitian Anda dan dapatkan indeks di Scopus dan publikasikan di IEEE Xplore, tingkatkan profil akademis Anda dan buka jalan bagi peluang masa depan",
     place: "Kampus UCIC",
     date: "12 Juli 2025",
   },
