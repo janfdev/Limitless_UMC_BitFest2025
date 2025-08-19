@@ -260,7 +260,7 @@ export default function Header() {
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
-                              className="space-y-2 bg-primary rounded-xl overflow-hidden"
+                              className="space-y-2 rounded-xl overflow-hidden"
                               variants={dropdownVariants}
                               initial="hidden"
                               animate="visible"
@@ -271,14 +271,12 @@ export default function Header() {
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
-                                  className="block md:p-3 py-2 px-4 text-sm transition-colors hover:bg-yellow-light group"
+                                  className="block md:p-3 py-2 px-4 text-sm group"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   <div className="flex items-center justify-between">
-                                    <h4 className="text-white ">
-                                      {dropdownItem.name}
-                                    </h4>
-                                    <ChevronRight className="group-hover:translate-x-3 w-5 h-5 text-white transition-all duration-300" />
+                                    <h4>{dropdownItem.name}</h4>
+                                    <ChevronRight className="group-hover:translate-x-3 w-5 h-5 transition-all duration-300" />
                                   </div>
                                 </Link>
                               ))}
