@@ -90,7 +90,7 @@ export default function PartnershipSection({
 
   return (
     <section
-      className={`relative mx-auto w-full max-w-7xl px-6 md:px-10 py-16 md:py-24 ${
+      className={`relative mx-auto w-full px-6 md:px-10 py-16 md:py-24 ${
         className ?? ""
       }`}
       aria-labelledby="partnership-heading"
