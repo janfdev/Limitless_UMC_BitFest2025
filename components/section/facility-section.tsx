@@ -71,7 +71,7 @@ export default function FacilitySection() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <section className="relative pt-5 pb-20 px-4 bg-gradient-to-br from-blue-900 to-primary">
+      <section className="relative pt-5 pb-20 px-4 bg-gradient-to-br from-blue-900 to-blue-500">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-tr from-blue-50/70 via-transparent to-transparent" />
 
         {/* Title */}
