@@ -42,7 +42,7 @@ const Footer = () => {
               href="#"
               className="p-2 bg-white rounded-full shadow hover:bg-blue-50"
             >
-              <Facebook className="w-5 h-5 text-blue-600" />
+              <Facebook className="w-5 h-5 text-primary" />
             </a>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://pmb.cic.ac.id/"
-                className="hover:text-blue-600 transition"
+                className="hover:text-primary transition"
               >
                 PMB UCIC
               </a>
@@ -81,7 +81,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://simantu.cic.ac.id/"
-                className="hover:text-blue-600 transition"
+                className="hover:text-primary transition"
               >
                 Sistem Manajemen Mutu
               </a>
@@ -89,7 +89,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://pustaka.cic.ac.id/"
-                className="hover:text-blue-600 transition"
+                className="hover:text-primary transition"
               >
                 Perpustakaan
               </a>
@@ -104,23 +104,23 @@ const Footer = () => {
             <li>
               <a
                 href="https://www.instagram.com/universitas_cic"
-                className="hover:text-blue-600 transition"
+                className="hover:text-primary transition"
               >
                 Instagram
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
+              <a href="#" className="hover:text-primary transition">
                 YouTube
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
+              <a href="#" className="hover:text-primary transition">
                 Twitter
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-600 transition">
+              <a href="#" className="hover:text-primary transition">
                 Facebook
               </a>
             </li>

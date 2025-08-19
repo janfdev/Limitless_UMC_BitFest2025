@@ -104,7 +104,7 @@ export default function PartnershipSection({
       <div className="mx-auto max-w-3xl text-center">
         <h2
           id="affiliate-heading"
-          className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white"
+          className="text-3xl md:text-4xl font-bold tracking-tight text-primary"
         >
           Mitra Kerja Sama
         </h2>

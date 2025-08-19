@@ -114,7 +114,7 @@ const ActivitySection = () => {
       <div className="mx-auto md:max-w-7xl w-auto">
         <div className="flex items-center justify-center gap-2 text-2xl">
           <div className="flex flex-col items-center justify-center group">
-            <h1 className="font-semibold text-blue-600 py-1">
+            <h1 className="font-semibold text-primary py-1">
               Berita & Kegiatan
             </h1>
             <span className="w-16 h-1 rounded-lg bg-secondary"></span>

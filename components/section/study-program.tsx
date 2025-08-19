@@ -139,7 +139,7 @@ const StudyProgram = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <div className="flex flex-col items-center justify-center">
-            <h1 className="font-semibold text-blue-600 pb-1">Program Studi</h1>
+            <h1 className="font-semibold text-primary pb-1">Program Studi</h1>
             <span className="w-16 h-1 rounded-lg bg-secondary"></span>
           </div>
         </motion.div>

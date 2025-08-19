@@ -64,7 +64,7 @@ const AchievementSection = () => {
   return (
     <section className="container max-w-6xl mx-auto p-10">
       <div className="flex flex-col text-2xl lg:text-3xl items-center justify-center group py-10">
-        <h1 className="font-semibold text-blue-600">Mahasiswa Berprestasi</h1>
+        <h1 className="font-semibold text-primary">Mahasiswa Berprestasi</h1>
         <span className="w-16 h-1 rounded-lg bg-secondary"></span>
       </div>
 

@@ -56,7 +56,7 @@ const StatsSection = () => {
         variants={fadeIn("up")}
       >
         <div className="flex flex-col items-center justify-center group">
-          <h1 className="font-semibold text-blue-600 pb-1">Profil Singkat</h1>
+          <h1 className="font-semibold text-primary pb-1">Profil Singkat</h1>
           <span className="w-16 h-1 rounded-lg bg-secondary"></span>
         </div>
       </motion.div>

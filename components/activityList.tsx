@@ -65,11 +65,11 @@ const ActivityList = ({
 
           <div className="flex flex-col gap-2 text-sm px-2 pb-2">
             <span className="flex items-center gap-2">
-              <MapPin className="text-blue-600 w-5 h-5 shrink-0" />
+              <MapPin className="text-primary w-5 h-5 shrink-0" />
               <p className="font-medium">{place}</p>
             </span>
             <span className="flex items-center gap-2">
-              <Calendar className="text-blue-600 w-5 h-5 shrink-0" />
+              <Calendar className="text-primary w-5 h-5 shrink-0" />
               <p>{date}</p>
             </span>
           </div>
